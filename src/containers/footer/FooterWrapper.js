@@ -57,6 +57,19 @@ export const FooterWrapper = styled.div`
       a:hover {
         color: #838383;
       }
+      span {
+        font-size: 14px;
+        color: #838383;
+        font-weight: 300;
+        opacity: 0.7;
+        line-height: 18px;
+      }
+      p {
+        font-size: 14px;
+        color: #838383;
+        font-weight: 300;
+        line-height: 18px;
+      }
     }
     
     .footer-right {
