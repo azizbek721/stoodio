@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {NavbarWrapper} from "./NavbarWrapper";
-import {Link} from "react-router-dom";
-import navLogo from "../../assets/nav-logo.svg"
+import {Link, useLocation} from "react-router-dom";
+import navLogo from "../../assets/images/nav-logo.svg"
 import useWindowSize from "../../hooks/useWindowSize";
 import {dispatch} from "../../store/store";
 import {open} from "../../store/reducers/reducer";
@@ -11,8 +11,17 @@ import {Icon} from '@iconify/react';
 const Navbar = () => {
 
     const {width} = useWindowSize();
+    const currentPath = useLocation().pathname;
 
     const [showButton, setShowButton] = useState(false);
+
+    const notActive = {
+        color: "black",
+    };
+
+    const activeStyle = {
+        color: "white",
+    };
 
     const handleScroll = () => {
         if (window.scrollY >= 300) {
@@ -30,14 +39,15 @@ const Navbar = () => {
     }, []);
 
     return (
-        <>
-            {width > 900 ? (
+        <div style={currentPath === "/" ? activeStyle : notActive}>
+            {width > 1024 ? (
                 <>
                     <NavbarWrapper>
                         <nav className="navbar container mx-auto flex justify-between items-start">
-                            <Link to="/" className="nav-logo">
-                                <img src={navLogo} alt=""/>
-                            </Link>
+                            {currentPath !== "/" ?
+                                <Link to="/" className="nav-logo">
+                                    <img src={navLogo} alt=""/>
+                                </Link> : <div></div>}
                             <div className="nav-center flex gap-x-5">
                                 <Link to="/portfolio">.портфолио</Link>
                                 <Link to="/team">stoodio.team</Link>
@@ -59,9 +69,10 @@ const Navbar = () => {
                 <>
                     <NavbarWrapper>
                         <nav className="navbar container mx-auto flex justify-between items-start">
-                            <Link to="/" className="nav-logo">
-                                <img src={navLogo} alt=""/>
-                            </Link>
+                            {currentPath !== "/" ?
+                                <Link to="/" className="nav-logo">
+                                    <img src={navLogo} alt=""/>
+                                </Link> : <div></div>}
                             <button
                                 className="hamburger-btn"
                                 onClick={() => dispatch(open())}>
@@ -73,7 +84,7 @@ const Navbar = () => {
                     <Menu/>
                 </>
             )}
-        </>
+        </div>
     );
 };
 

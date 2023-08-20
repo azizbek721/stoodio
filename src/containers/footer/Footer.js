@@ -1,7 +1,7 @@
 import React from 'react';
 import {FooterWrapper} from "./FooterWrapper";
-import footerLogo from "../../assets/logo.svg"
-import qrCode from "../../assets/qr-code.svg"
+import footerLogo from "../../assets/images/logo.svg"
+import qrCode from "../../assets/images/qr-code.svg"
 import {Link} from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
 

@@ -3,8 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {close} from "../../store/reducers/reducer";
 import {MenuTop} from "./NavbarWrapper";
 import {Icon} from '@iconify/react';
-import menuLogo from "../../assets/logo.svg"
-import {NavLink} from "react-router-dom";
+import menuLogo from "../../assets/images/logo.svg"
+import {Link, NavLink} from "react-router-dom";
 
 const Menu = () => {
 
@@ -32,7 +32,9 @@ const Menu = () => {
             <MenuTop menu={menu}>
                 <div className="menu flex flex-col justify-between">
                     <div className="menu-top flex justify-between items-start">
-                        <img src={menuLogo} alt=""/>
+                        <Link to="/" onClick={closing}>
+                            <img src={menuLogo} alt=""/>
+                        </Link>
                         <Icon icon="iconamoon:close-light" color="white" width="40" height="40"
                               className="cursor-pointer close-icon"
                               onClick={closing}/>

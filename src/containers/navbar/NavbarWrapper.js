@@ -38,6 +38,9 @@ export const NavbarWrapper = styled.div`
         display: block;
         text-align: center;
     }
+    .burger-path {
+        color: black!important;
+    }
     .hidden {
         display: none;
     }
