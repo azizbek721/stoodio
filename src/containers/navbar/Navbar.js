@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {NavbarWrapper} from "./NavbarWrapper";
 import {Link, useLocation} from "react-router-dom";
-import navLogo from "../../assets/images/nav-logo.svg"
+import navLogo from "../../assets/images/nav-logo.png"
 import useWindowSize from "../../hooks/useWindowSize";
 import {dispatch} from "../../store/store";
 import {open} from "../../store/reducers/reducer";

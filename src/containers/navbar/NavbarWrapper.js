@@ -70,8 +70,8 @@ export const MenuTop = styled.div`
     right: 0;
     height: 100%;
     overflow-x: scroll;
-    width: ${(props) => (props.menu ? "680px" : "0")};
-    background-color: #000;
+  width: ${(props) => (props.menu.toString() === 'true' ? "680px" : "0")};
+  background-color: #000;
     position: fixed;
     transition: all 0.3s linear;
     z-index: 999;

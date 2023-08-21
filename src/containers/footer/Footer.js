@@ -1,6 +1,7 @@
 import React from 'react';
 import {FooterWrapper} from "./FooterWrapper";
-import footerLogo from "../../assets/images/logo.svg"
+// import footerLogo from "../../assets/images/logo.svg"
+import footerLogo from "../../assets/images/logo.png"
 import qrCode from "../../assets/images/qr-code.svg"
 import {Link} from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
@@ -47,7 +48,7 @@ const Footer = () => {
                         <div className="footer-right flex flex-col gap-y-10">
                             <Link to="/policy">политика <br/> конфиденциальности</Link>
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
-                            <p>© 2006—2023 <br/>Архитектурное бюро Зиядиллы Наврузовой Stoodio.uz</p>
+                            <p>© 2006—2023 <br/>Архитектурное бюро Зиядилло Наврузовой Stoodio.uz</p>
                         </div>
                     </div>
                 ) : width > 480 ? (

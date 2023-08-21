@@ -14,7 +14,7 @@ const Header = () => {
                 <img src={mainLogo} alt=""/>
                 <div className="header-texts flex flex-col gap-y-5">
                     <p>создаем</p>
-                    <h3>архитектуру, дизайн <br/> и ландшафт в современных стилях по всему миру</h3>
+                    <h3>архитектуру, дизайн <br/> и ландшафт в современных стилях</h3>
                 </div>
             </header>
         </div>

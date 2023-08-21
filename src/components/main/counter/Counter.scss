@@ -1,0 +1,40 @@
+.counters {
+  h1 {
+    transform-origin: center center;
+    font-size: 100px;
+    line-height: 94px;
+    color: #000000;
+    font-weight: bold;
+  }
+  p {
+    line-height: 21px;
+    color: #000000;
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .counters {
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    grid-row-gap: 30px;
+    margin-bottom: 100px;
+    .year-count,
+    .projects-count,
+    .cities-count {
+      width: 130px;
+      grid-row-gap: 10px;
+    }
+    h1 {
+      font-size: 44px;
+      line-height: 44px;
+      letter-spacing: 1px;
+    }
+    p {
+      line-height: 17px;
+      font-size: 13px;
+    }
+  }
+}
