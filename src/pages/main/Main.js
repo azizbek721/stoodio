@@ -3,6 +3,7 @@ import Footer from "../../containers/footer/Footer";
 import Header from "../../components/main/header/Header";
 import Info from "../../components/main/info/Info";
 import Counter from "../../components/main/counter/Counter";
+import Founder from "../../components/main/founder/Founder";
 
 const Main = () => {
     return (
@@ -10,6 +11,7 @@ const Main = () => {
             <Header/>
             <Info />
             <Counter />
+            <Founder />
             <div className="container mx-auto">
                 Main page
                 <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta distinctio eum expedita illo ipsam

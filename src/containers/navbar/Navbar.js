@@ -24,7 +24,7 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-        if (window.scrollY >= 300) {
+        if (window.scrollY >= 600) {
             setShowButton(true);
         } else {
             setShowButton(false);
@@ -61,6 +61,11 @@ const Navbar = () => {
                             onClick={() => dispatch(open())}>
                             <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28"
                                   height="28"/>
+                        </button>
+                        <button
+                            className={showButton ? "discuss-btn" : "hidden"}
+                            onClick={() => dispatch(open())}>
+                            обсудить проект
                         </button>
                     </NavbarWrapper>
                     <Menu/>

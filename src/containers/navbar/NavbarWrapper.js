@@ -38,6 +38,25 @@ export const NavbarWrapper = styled.div`
         display: block;
         text-align: center;
     }
+    .discuss-btn {
+        position: fixed;
+        bottom: 50px;
+        left: 50px;
+        width: 265px;
+        height: 60px;
+        background-color: #0047BB;
+        //opacity: 0.90;
+        padding: 0 35px;
+        font-size: 24px;
+        line-height: 56px;
+        font-weight: 300;
+        -webkit-border-radius: 2px;
+        display: block;
+        text-align: center;
+    }
+    .discuss-btn:hover {
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
     .burger-path {
         color: black!important;
     }

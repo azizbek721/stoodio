@@ -1,4 +1,5 @@
 .counters {
+  margin-bottom: 200px;
   h1 {
     transform-origin: center center;
     font-size: 100px;
@@ -20,7 +21,6 @@
     justify-content: center;
     align-items: end;
     grid-row-gap: 30px;
-    margin-bottom: 100px;
     .year-count,
     .projects-count,
     .cities-count {
