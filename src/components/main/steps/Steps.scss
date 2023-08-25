@@ -1,0 +1,217 @@
+.steps {
+  margin: 100px 0;
+
+  .steps-top {
+    .top-left {
+      .number {
+        transform-origin: center center;
+        line-height: 110px;
+        color: #000000;
+        font-size: 130px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        word-break: normal;
+        vertical-align: middle;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      h5 {
+        transform-origin: center center;
+        line-height: 64px;
+        color: #000000;
+        font-size: 40px;
+        font-weight: 400;
+        word-break: normal;
+        vertical-align: middle;
+        -webkit-text-size-adjust: 100%;
+
+      }
+    }
+
+    .top-right {
+      p {
+        transform-origin: center center;
+        line-height: 18px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 0.6;
+        word-break: normal;
+        vertical-align: middle;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(0px) rotate(180deg);
+          animation-timing-function: ease-in-out;
+        }
+        27% {
+          transform: translateX(-10px) rotate(180deg);
+          animation-timing-function: ease-in-out;
+        }
+        100% {
+          transform: translateX(0px) rotate(180deg);
+        }
+      }
+
+      img {
+        animation: move infinite linear 1s;
+        backface-visibility: hidden;
+        opacity: 0.3;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+      }
+    }
+  }
+
+  .steps-cards {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 353px;
+
+    .steps-card {
+      width: 353px;
+      height: 400px;
+
+      h2 {
+        text-size-adjust: auto;
+        transform-origin: center center;
+        line-height: 29px;
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+        word-break: normal;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      p {
+        text-size-adjust: auto;
+        transform-origin: center center;
+        line-height: 24px;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+
+      .steps-number {
+        width: 48px;
+        height: 48px !important;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 15px;
+        h4 {
+          text-size-adjust: auto;
+          transform-origin: center center;
+          line-height: 1.2;
+          font-size: 24px;
+          color: #000000;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 620px) {
+  .steps {
+    margin: 100px 0;
+
+    .steps-top {
+      .top-left {
+        .number {
+          line-height: 50px;
+          font-size: 55px;
+        }
+
+        h5 {
+          text-size-adjust: auto;
+          line-height: 28px;
+          font-size: 22px;
+          font-weight: 400;
+        }
+      }
+
+      .top-right {
+        p {
+          line-height: 16px;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .steps-cards {
+      margin-top: 30px;
+      margin-bottom: 0;
+      width: 100%;
+
+      .steps-card {
+        width: 240px;
+        height: 310px;
+        padding: 10px;
+
+        h2 {
+          line-height: 20px;
+          font-size: 17px;
+        }
+
+        p {
+          line-height: 17px;
+          font-size: 13px;
+          font-weight: 300;
+          margin-top: 15px;
+        }
+
+
+        .steps-number {
+          h4 {
+            line-height: 31px;
+            font-size: 24px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .steps {
+    margin: 90px 0;
+
+    .steps-top {
+      .top-left {
+        flex-direction: column;
+        grid-row-gap: 20px;
+
+        .number {
+          line-height: 50px;
+          font-size: 55px;
+        }
+
+        h5 {
+          text-size-adjust: auto;
+          line-height: 31px;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+
+      .top-right {
+        p {
+          line-height: 16px;
+          font-size: 13px;
+        }
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+}

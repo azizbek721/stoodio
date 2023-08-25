@@ -6,6 +6,7 @@ import Counter from "../../components/main/counter/Counter";
 import Founder from "../../components/main/founder/Founder";
 import Advantages from "../../components/main/advantages/Advantages";
 import Discuss from "../../components/main/discuss/Discuss";
+import Steps from "../../components/main/steps/Steps";
 
 const Main = () => {
     return (
@@ -15,6 +16,7 @@ const Main = () => {
             <Counter />
             <Founder />
             <Advantages />
+            <Steps />
             <Discuss />
             <div className="container mx-auto">
                 Main page
