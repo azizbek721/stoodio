@@ -1,8 +1,8 @@
-.video-container {
+.discuss-container {
   position: relative;
   overflow: hidden;
-  height: 600px;
-  .background-video {
+  height: 100%;
+  .background-discuss {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,7 +73,7 @@
 
 
 @media only screen and (max-width: 1024px) {
-  .video-container {
+  .discuss-container {
     height: 530px;
 
     .discuss {
@@ -95,7 +95,7 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .video-container {
+  .discuss-container {
     height: 370px;
 
     .discuss {
@@ -118,7 +118,7 @@
 }
 
 @media only screen and (max-width: 750px) {
-  .video-container {
+  .discuss-container {
     height: 370px;
 
     .discuss {
@@ -141,7 +141,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .video-container {
+  .discuss-container {
     height: 340px;
 
     .discuss {
@@ -164,7 +164,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .video-container {
+  .discuss-container {
     height: 340px;
 
     .discuss {
@@ -191,7 +191,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .video-container {
+  .discuss-container {
     height: 340px;
 
     .discuss {

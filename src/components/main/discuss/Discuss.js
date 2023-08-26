@@ -8,8 +8,8 @@ const Discuss = () => {
     const {width} = useWindowSize();
 
     return (
-        <div className="video-container">
-            <video className="background-video" src={discuss} autoPlay muted loop playsInline/>
+        <div className="discuss-container">
+            <video className="background-discuss" src={discuss} autoPlay muted loop playsInline/>
             <div className="discuss container mx-auto flex justify-end content-end">
                 {width > 500 ? (
                     <div className="discuss-text">
