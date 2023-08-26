@@ -1,0 +1,296 @@
+.contact-top {
+  margin: 100px 0;
+
+  .contact-left {
+    margin: 50px 0;
+
+    .contact-left-top {
+      .round {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #0047bb;
+      }
+
+      h3 {
+        transform-origin: center center;
+        line-height: 29px;
+        color: #000000;
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+
+    .contact-left-address {
+      margin: 30px 0;
+
+      h3 {
+        font-weight: 700;
+        line-height: 24px;
+        color: #000000;
+        font-size: 17px;
+      }
+
+      p {
+        line-height: 24px;
+        color: #000000;
+        font-size: 17px;
+        font-weight: 400;
+        word-break: normal;
+      }
+    }
+
+    .contact-request {
+      line-height: 20px;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 400;
+      word-break: normal;
+      width: 300px;
+    }
+  }
+
+  .contact-right {
+    .contact-title {
+      line-height: 1;
+      font-weight: 500;
+      font-size: 96px;
+      color: #000000;
+      text-align: left;
+    }
+
+    h3 {
+      width: 510px;
+      transform-origin: center center;
+      line-height: 29px;
+      color: #000000;
+      font-size: 24px;
+      font-weight: 400;
+      word-break: normal;
+    }
+
+    .single-number {
+      a {
+        line-height: 67px;
+        color: #000000;
+        font-size: 56px;
+        font-weight: 400;
+      }
+
+      p {
+        width: 120px;
+        line-height: 20px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .mail-instagram {
+      .mail, .instagram {
+        width: 220px;
+
+        p {
+          line-height: 20px;
+          color: #000000;
+          font-size: 14px;
+          font-weight: 300;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          line-height: 29px;
+          color: #000000;
+          font-size: 24px;
+          font-weight: 450;
+        }
+      }
+    }
+  }
+}
+
+.office-img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 950px) {
+  .contact-top {
+    flex-direction: column-reverse;
+    .contact-left {
+      float: right;
+      margin: 50px 0;
+      .contact-left-top {
+        .round {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background-color: #0047bb;
+        }
+
+        h3 {
+          transform-origin: center center;
+          line-height: 29px;
+          color: #000000;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+
+      .contact-left-address {
+        margin: 30px 0;
+
+        h3 {
+          font-weight: 700;
+          line-height: 24px;
+          color: #000000;
+          font-size: 17px;
+        }
+
+        p {
+          line-height: 24px;
+          color: #000000;
+          font-size: 17px;
+          font-weight: 400;
+          word-break: normal;
+        }
+      }
+
+      .contact-request {
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        width: 300px;
+      }
+    }
+
+    .contact-right {
+      .contact-title {
+        font-weight: 500;
+        font-size: 90px;
+      }
+
+      h3 {
+        width: 520px;
+        line-height: 29px;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      .single-number {
+        a {
+          line-height: 1.2;
+          font-size: 38px;
+        }
+
+        p {
+          width: 120px;
+          line-height: 20px;
+          font-size: 14px;
+        }
+      }
+
+      .mail-instagram {
+        .mail, .instagram {
+          width: 270px;
+        }
+      }
+    }
+  }
+  .office-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .contact-top {
+    flex-direction: column-reverse;
+    .contact-left {
+      float: right;
+      margin: 50px 0 0 0;
+      .contact-left-top {
+        .round {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background-color: #0047bb;
+        }
+
+        h3 {
+          transform-origin: center center;
+          line-height: 29px;
+          color: #000000;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+
+      .contact-left-address {
+        margin: 30px 0;
+
+        h3 {
+          font-weight: 700;
+          line-height: 24px;
+          color: #000000;
+          font-size: 17px;
+        }
+
+        p {
+          line-height: 24px;
+          color: #000000;
+          font-size: 17px;
+          font-weight: 400;
+          word-break: normal;
+        }
+      }
+
+      .contact-request {
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        width: 300px;
+      }
+    }
+
+    .contact-right {
+      align-items: start;
+      .contact-title {
+        font-weight: 500;
+        font-size: 48px;
+      }
+
+      h3 {
+        width: auto;
+        line-height: 20px;
+        font-size: 17px;
+        font-weight: 400;
+      }
+
+      .single-number {
+        flex-direction: column-reverse;
+        align-items: start;
+        a {
+          line-height: 31px;
+          font-size: 24px;
+        }
+
+        p {
+          width: auto;
+          line-height: 20px;
+          font-size: 14px;
+        }
+      }
+
+      .mail-instagram {
+        flex-direction: column;
+        align-items: start;
+        grid-row-gap: 25px;
+        .mail, .instagram {
+          width: auto;
+        }
+      }
+    }
+  }
+  .office-img {
+    width: 100%;
+  }
+}
