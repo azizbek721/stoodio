@@ -43,7 +43,7 @@ export const NavbarWrapper = styled.div`
         position: fixed;
         bottom: 50px;
         left: 50px;
-        width: 265px;
+        width: auto;
         height: 60px;
         z-index: 9;
         background-color: #0047BB;

@@ -174,9 +174,10 @@ export const DiscussWrapper = styled.div`
       .discuss {
         justify-content: left;
         bottom: 0;
-        height: 188px;
+        height: ${(props) => (props.currentPath === '/team' ? "200px" : "188px")};
 
         .discuss-text {
+          width: ${(props) => (props.currentPath === '/team' ? "250px" : "")};
           line-height: 33px;
           font-size: 30px;
           letter-spacing: 0;
@@ -201,9 +202,10 @@ export const DiscussWrapper = styled.div`
       .discuss {
         justify-content: left;
         bottom: 30px;
-        height: 188px;
+        height: ${(props) => (props.currentPath === '/team' ? "160px" : "188px")};
 
         .discuss-text {
+          width: ${(props) => (props.currentPath === '/team' ? "250px" : "")};
           line-height: 33px;
           font-size: 30px;
           letter-spacing: 0;

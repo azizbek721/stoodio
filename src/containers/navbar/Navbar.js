@@ -68,7 +68,7 @@ const Navbar = () => {
                         <button
                             className={showButton ? "fixed-discuss-btn" : "hidden"}
                             onClick={() => dispatch(open())}>
-                            обсудить проект
+                            {currentPath === "/team" ? "хочу у вас работать" : "обсудить проект"}
                         </button>
                     </NavbarWrapper>
                     <Menu/>
