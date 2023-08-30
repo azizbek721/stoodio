@@ -80,8 +80,8 @@ export const DiscussWrapper = styled.div`
       height: 530px;
 
       .discuss {
-        bottom: 100px;
-        height: 188px;
+        bottom: ${(props) => (props.currentPath === '/team' ? "50px" : "100px")};
+        height: ${(props) => (props.currentPath === '/team' ? "auto" : "188px")};
 
         .discuss-text {
           line-height: 63px;
@@ -103,8 +103,8 @@ export const DiscussWrapper = styled.div`
 
       .discuss {
         justify-content: left;
-        bottom: 60px;
-        height: 188px;
+        bottom: ${(props) => (props.currentPath === '/team' ? "50px" : "60px")};
+        height: ${(props) => (props.currentPath === '/team' ? "auto" : "188px")};
 
         .discuss-text {
           line-height: 63px;
@@ -126,8 +126,8 @@ export const DiscussWrapper = styled.div`
 
       .discuss {
         justify-content: left;
-        bottom: 60px;
-        height: 188px;
+        bottom: ${(props) => (props.currentPath === '/team' ? "50px" : "60px")};
+        height: ${(props) => (props.currentPath === '/team' ? "auto" : "188px")};
 
         .discuss-text {
           line-height: 63px;
@@ -150,9 +150,10 @@ export const DiscussWrapper = styled.div`
       .discuss {
         justify-content: left;
         bottom: 45px;
-        height: 188px;
+        height: ${(props) => (props.currentPath === '/team' ? "auto" : "188px")};
 
         .discuss-text {
+          width: 100%;
           line-height: 56px;
           font-size: 48px;
           position: relative;

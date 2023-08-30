@@ -6,7 +6,6 @@ const SaveMoney = () => {
     return (
         <div className="save-money-container">
             <video className="save-money-background" src={saveMoney} autoPlay muted loop playsInline/>
-            SaveMoney
         </div>
     );
 };
