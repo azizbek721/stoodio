@@ -33,19 +33,21 @@ export const NavbarWrapper = styled.div`
         height: 58px;
         background-color: #EBEBEB;
         opacity: 0.90;
+        z-index: 9;
         padding: 16px;
         border-radius: 50%;
         display: block;
         text-align: center;
     }
-    .discuss-btn {
+    .fixed-discuss-btn {
         position: fixed;
         bottom: 50px;
         left: 50px;
         width: 265px;
         height: 60px;
+        z-index: 9;
         background-color: #0047BB;
-        //opacity: 0.90;
+        color: white !important;
         padding: 0 35px;
         font-size: 24px;
         line-height: 56px;
@@ -54,7 +56,7 @@ export const NavbarWrapper = styled.div`
         display: block;
         text-align: center;
     }
-    .discuss-btn:hover {
+    .fixed-discuss-btn:hover {
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
     .burger-path {

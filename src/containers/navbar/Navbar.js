@@ -24,7 +24,10 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-        if (window.scrollY >= 600) {
+        const discussSection = document.getElementById("discuss-section");
+        const windowScrollY = window.scrollY;
+
+        if ((windowScrollY >= 600) && (discussSection && discussSection.getBoundingClientRect().top >= window.innerHeight / 2)) {
             setShowButton(true);
         } else {
             setShowButton(false);
@@ -63,7 +66,7 @@ const Navbar = () => {
                                   height="28"/>
                         </button>
                         <button
-                            className={showButton ? "discuss-btn" : "hidden"}
+                            className={showButton ? "fixed-discuss-btn" : "hidden"}
                             onClick={() => dispatch(open())}>
                             обсудить проект
                         </button>

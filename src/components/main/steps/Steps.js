@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./Steps.scss"
 import useWindowSize from "../../../hooks/useWindowSize";
 import arrowRight from "../../../assets/images/arrow-right.svg";

@@ -1,0 +1,15 @@
+.save-money-container {
+  position: relative;
+  overflow: hidden;
+  height: 520px;
+
+  .save-money-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    z-index: -1;
+  }
+}

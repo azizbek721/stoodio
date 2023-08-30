@@ -1,31 +1,43 @@
 import React from 'react';
-import "./Discuss.scss"
-import discuss from "../../../assets/videos/discuss.mp4";
+// import "./Discuss.scss"
+import discuss from "../../../assets/videos/discuss-background.mp4";
 import useWindowSize from "../../../hooks/useWindowSize";
+import {useLocation, useNavigate} from "react-router-dom";
+import {DiscussWrapper} from "./DiscussWrapper";
 
 const Discuss = () => {
 
     const {width} = useWindowSize();
+    const navigate = useNavigate();
+    const currentPath = useLocation().pathname;
 
     return (
-        <div className="discuss-container">
-            <video className="background-discuss" src={discuss} autoPlay muted loop playsInline/>
-            <div className="discuss container mx-auto flex justify-end content-end">
-                {width > 500 ? (
-                    <div className="discuss-text">
-                        проектируйте будущее вместе с нами <button className="discuss-btn">обсудить проект</button>
-                    </div>
-                ) : (
-                    <>
+        <DiscussWrapper currentPath={currentPath}>
+            <div id="discuss-section" className="discuss-container">
+                <video className="background-discuss" src={discuss} autoPlay muted loop playsInline/>
+                <div className="discuss container mx-auto flex justify-end content-end">
+                    {width > 500 ? (
                         <div className="discuss-text">
-                            проектируйте будущее вместе с нами
+                            {currentPath === "/team" ? "стать частью команды" : "проектируйте будущее вместе с нами"}
+                            {currentPath === "/team" ?
+                                <button className="discuss-btn" onClick={() => navigate('/jobs')}>показать вакансии</button> :
+                                <button className="discuss-btn">обсудить проект</button>}
                         </div>
-                        <button className="discuss-btn">обсудить проект</button>
-                    </>
-                )}
+                    ) : (
+                        <>
+                            <div className="discuss-text">
+                                {currentPath === "/team" ? "стать частью команды" : "проектируйте будущее вместе с нами"}
+                            </div>
+                            {currentPath === "/team" ?
+                                <button className="discuss-btn" onClick={() => navigate('/jobs')}>показать вакансии</button> :
+                                <button className="discuss-btn">обсудить проект</button>}
+                        </>
+                    )}
 
+                </div>
             </div>
-        </div>
+        </DiscussWrapper>
+
     );
 };
 

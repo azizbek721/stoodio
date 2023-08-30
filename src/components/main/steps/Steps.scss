@@ -72,29 +72,7 @@
 
     .steps-card {
       width: 353px;
-      height: 400px;
-
-      h2 {
-        text-size-adjust: auto;
-        transform-origin: center center;
-        line-height: 29px;
-        font-size: 24px;
-        font-weight: 600;
-        color: #000000;
-        word-break: normal;
-        display: table-cell;
-        vertical-align: middle;
-      }
-
-      p {
-        text-size-adjust: auto;
-        transform-origin: center center;
-        line-height: 24px;
-        color: #000000;
-        font-size: 18px;
-        font-weight: 400;
-        margin-top: 20px;
-      }
+      height: 350px;
 
       .steps-number {
         width: 48px;
@@ -104,14 +82,29 @@
         text-align: center;
         padding: 10px;
         margin-bottom: 15px;
+
         h4 {
-          text-size-adjust: auto;
-          transform-origin: center center;
           line-height: 1.2;
           font-size: 24px;
           color: #000000;
           font-weight: 400;
         }
+      }
+
+      h2 {
+        line-height: 29px;
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+        word-break: normal;
+      }
+
+      p {
+        line-height: 24px;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 20px;
       }
     }
   }

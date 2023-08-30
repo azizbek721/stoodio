@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Contact.scss"
-import office from "../../assets/images/office.jpeg"
+// import office from "../../assets/images/office.jpeg"
+import office from "../../assets/images/office.jpg"
 
 const Contact = () => {
     return (
@@ -12,8 +13,8 @@ const Contact = () => {
                         <h3>офис</h3>
                     </div>
                     <div className="contact-left-address">
-                        <h3>Москва</h3>
-                        <p>Береговой проезд, 3</p>
+                        <h3>Узбекистан</h3>
+                        <p>22-й квартал, дом 2, массив Чиланзар, Учтепинский район, г.Ташкент</p>
                     </div>
                     <p className="contact-request">
                         у нас к вам просьба — перед приездом к нам в гости, запишитесь
@@ -29,8 +30,8 @@ const Contact = () => {
                     </div>
                     <div className="mail-instagram flex items-end gap-x-12">
                         <div className="mail">
-                            <p>почта для прессы, поставщиков и <br/> другого партнерства</p>
-                            <a href="mailto:hello@stankevich.design">hello@stankevich.design</a>
+                            <p>связь  для прессы, поставщиков и <br/> другого партнерства</p>
+                            <a href="https://t.me/navruzov_z" target="blank">@navruzov_z</a>
                         </div>
                         <div className="instagram">
                             <p>instagram</p>
