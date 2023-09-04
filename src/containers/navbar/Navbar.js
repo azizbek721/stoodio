@@ -81,10 +81,13 @@ const Navbar = () => {
                 <>
                     <NavbarWrapper>
                         <nav className="navbar container mx-auto flex justify-between items-start">
-                            {currentPath !== "/" ?
+                            {currentPath !== "/" ? (
                                 <Link to="/" className="nav-logo">
-                                    <img src={navLogo} alt=""/>
-                                </Link> : <div></div>}
+                                    <img src={/^\/portfolio\/\d+$/.test(currentPath) ? whiteLogo : navLogo} alt="" />
+                                </Link>
+                            ) : (
+                                <div></div>
+                            )}
                             <button
                                 className="hamburger-btn"
                                 onClick={() => dispatch(open())}>
