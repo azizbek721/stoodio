@@ -1,7 +1,7 @@
 .policy-texts-over {
-  margin: 100px 0;
+  margin: 100px 80px 100px 0;
   .policy-texts {
-    width: 510px;
+    width: 610px;
     h2 {
       line-height: 46px;
       font-size: 38px;
@@ -30,6 +30,7 @@
 
 @media only screen and (max-width: 960px) {
   .policy-texts-over {
+    margin: 100px 0;
     .policy-texts {
       width: 100%;
     }

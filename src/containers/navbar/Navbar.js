@@ -88,12 +88,6 @@ const Navbar = () => {
                             ) : (
                                 <div></div>
                             )}
-                            <button
-                                className="hamburger-btn"
-                                onClick={() => dispatch(open())}>
-                                <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28"
-                                      height="28"/>
-                            </button>
                         </nav>
                     </NavbarWrapper>
                     <Menu/>
