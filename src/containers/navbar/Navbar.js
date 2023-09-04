@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {NavbarWrapper} from "./NavbarWrapper";
 import {Link, useLocation} from "react-router-dom";
 import navLogo from "../../assets/images/nav-logo.png"
+import whiteLogo from "../../assets/images/logo.png"
 import useWindowSize from "../../hooks/useWindowSize";
 import {dispatch} from "../../store/store";
 import {open} from "../../store/reducers/reducer";
@@ -42,15 +43,18 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div style={currentPath === "/" ? activeStyle : notActive}>
+        <div style={currentPath === "/" || /^\/portfolio\/\d+$/.test(currentPath) ? activeStyle : notActive}>
             {width > 1024 ? (
                 <>
                     <NavbarWrapper>
                         <nav className="navbar container mx-auto flex justify-between items-start">
-                            {currentPath !== "/" ?
+                            {currentPath !== "/" ? (
                                 <Link to="/" className="nav-logo">
-                                    <img src={navLogo} alt=""/>
-                                </Link> : <div></div>}
+                                    <img src={/^\/portfolio\/\d+$/.test(currentPath) ? whiteLogo : navLogo} alt="" />
+                                </Link>
+                            ) : (
+                                <div></div>
+                            )}
                             <div className="nav-center flex gap-x-5">
                                 <Link to="/portfolio">.портфолио</Link>
                                 <Link to="/team">stoodio.team</Link>

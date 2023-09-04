@@ -76,6 +76,19 @@ export const NavbarWrapper = styled.div`
                 }
             }
             .hamburger-btn {
+                top: 30px;
+                right: 30px;
+                width: 48px;
+                height: 48px;
+                padding: 10px;
+            }
+        }
+    }
+  
+    @media only screen and (max-width: 900px) {
+        padding-top: 20px;
+        .navbar {
+            .hamburger-btn {
                 top: 20px;
                 right: 20px;
                 width: 48px;

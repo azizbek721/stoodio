@@ -5,6 +5,7 @@ import Jobs from "./pages/jobs/Jobs";
 import Team from "./pages/team/Team";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Policy from "./pages/policy/Policy";
+import PortfolioById from "./pages/portfolio/PortfolioById";
 
 function App() {
     const currentPath = useLocation().pathname;
@@ -14,6 +15,7 @@ function App() {
             <Routes currentPath={currentPath}>
                 <Route path="/" element={<Main/>}/>
                 <Route path="/portfolio" element={<Portfolio/>}/>
+                <Route path="/portfolio/:id" element={<PortfolioById/>}/>
                 <Route path="/team" element={<Team/>}/>
                 <Route path="/jobs" element={<Jobs/>}/>
                 <Route path="/contacts" element={<Contacts/>}/>
