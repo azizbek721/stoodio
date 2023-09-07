@@ -30,7 +30,7 @@ const Contact = () => {
                     </div>
                     <div className="mail-instagram flex items-end gap-x-12">
                         <div className="mail">
-                            <p>связь  для прессы, поставщиков и <br/> другого партнерства</p>
+                            <p>связь для прессы, поставщиков и <br/> другого партнерства</p>
                             <a href="https://t.me/navruzov_z" target="blank">@navruzov_z</a>
                         </div>
                         <div className="instagram">
@@ -40,8 +40,12 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <div className="my-8">
+            <div className="my-12">
                 <img className="office-img" src={office} alt=""/>
+            </div>
+            <div className="my-12">
+                <iframe height="500" width="100%" frameBorder="0" allowFullScreen
+                        src="//maps.google.com/maps?q=41.285628,69.166139&z=15&output=embed"/>
             </div>
         </div>
     );

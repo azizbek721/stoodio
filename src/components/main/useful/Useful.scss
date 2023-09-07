@@ -1,0 +1,320 @@
+.useful-background {
+  background-color: #F0F0F0;
+  color: black;
+  height: auto;
+  padding: 100px 0 60px 0;
+
+  .useful {
+    padding-right: 150px;
+
+    .useful-title {
+      font-size: 40px;
+      line-height: 1.2;
+      font-weight: 400;
+      width: 270px;
+    }
+
+    .useful-right {
+      width: 600px;
+
+      .useful-div {
+        h1 {
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 17px;
+          line-height: 1.3;
+          font-weight: 300;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+  .for-all {
+    background-color: #fff;
+    padding: 50px 200px;
+    margin: 80px 0;
+
+    .for-all-div {
+      width: 550px;
+
+      h1 {
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 1.3;
+        font-weight: 300;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .useful-background {
+
+    .useful {
+      padding-right: 0;
+
+      .useful-title {
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 400;
+        width: 270px;
+      }
+
+      .useful-right {
+        width: 490px;
+
+        .useful-div {
+          h1 {
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 17px;
+            line-height: 1.3;
+            font-weight: 300;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+
+    .for-all {
+      padding: 50px 0;
+      margin: 80px 0;
+
+      .for-all-div {
+        width: 490px;
+
+        h1 {
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 17px;
+          line-height: 1.3;
+          font-weight: 300;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .useful-background {
+
+    .useful {
+      display: block;
+      padding-right: 0;
+
+      .useful-title-div {
+        background-color: #F0F0F0;
+        width: 100%;
+        height: 135px;
+        padding-top: 15px;
+
+        .useful-title {
+          font-size: 40px;
+          line-height: 1.2;
+          font-weight: 400;
+          width: 390px;
+        }
+      }
+
+
+      .useful-right {
+        width: 100%;
+        margin-top: 30px;
+
+        .useful-div {
+          h1 {
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 17px;
+            line-height: 1.3;
+            font-weight: 300;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+
+    .for-all {
+      padding: 30px 10px;
+      margin: 80px 0;
+
+      .for-all-inner {
+        display: block;
+
+        .for-all-div {
+          width: 100%;
+          height: auto;
+
+          h1 {
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 17px;
+            line-height: 1.3;
+            font-weight: 300;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .useful-background {
+    padding: 60px 0 30px 0;
+
+    .useful {
+      .useful-title-div {
+        background-color: #F0F0F0;
+        width: 100%;
+        height: 100px;
+        padding-top: 15px;
+
+        .useful-title {
+          font-size: 24px;
+          line-height: 1.3;
+          font-weight: 400;
+          width: 345px;
+        }
+      }
+
+      .useful-right {
+        width: 100%;
+        margin-top: 0;
+
+        .useful-div {
+          h1 {
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 17px;
+            line-height: 1.3;
+            font-weight: 300;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+
+    .for-all {
+      padding: 30px 10px;
+      margin: 80px 0;
+
+      .for-all-inner {
+        display: block;
+
+        .for-all-div {
+          width: 100%;
+          height: auto;
+
+          h1 {
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 17px;
+            line-height: 1.3;
+            font-weight: 300;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .useful-background {
+    padding: 60px 0 30px 0;
+
+    .useful {
+      .useful-title-div {
+        height: 100px;
+        padding-top: 15px;
+
+        .useful-title {
+          font-size: 24px;
+          line-height: 1.3;
+          font-weight: 400;
+          width: 345px;
+        }
+      }
+
+      .useful-right {
+        grid-row-gap: 50px;
+
+        .useful-div {
+          h1 {
+            font-size: 18px;
+            line-height: 1.3;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 1.3;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    .for-all {
+      padding: 20px 7px;
+      margin: 40px 0;
+
+      .for-all-inner {
+        display: block;
+
+        .for-all-div {
+          width: 100%;
+          height: auto;
+
+          h1 {
+            font-size: 18px;
+            line-height: 1.3;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 1.3;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

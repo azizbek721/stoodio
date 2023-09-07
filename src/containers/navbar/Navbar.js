@@ -28,12 +28,16 @@ const Navbar = () => {
         const discussSection = document.getElementById("discuss-section");
         const windowScrollY = window.scrollY;
 
-        if ((windowScrollY >= 600) && (discussSection && discussSection.getBoundingClientRect().top >= window.innerHeight / 2)) {
+        if (
+            (windowScrollY >= 600 && discussSection && discussSection.getBoundingClientRect().top >= window.innerHeight / 2) ||
+            (currentPath === "/policy" || currentPath === "/contacts") && windowScrollY >= 150
+        ) {
             setShowButton(true);
         } else {
             setShowButton(false);
         }
     };
+
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -41,6 +45,8 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    console.log(showButton)
 
     return (
         <div style={currentPath === "/" || /^\/portfolio\/\d+$/.test(currentPath) ? activeStyle : notActive}>
@@ -70,8 +76,9 @@ const Navbar = () => {
                                   height="28"/>
                         </button>
                         <button
-                            className={showButton ? "fixed-discuss-btn" : "hidden"}
-                            onClick={() => dispatch(open())}>
+                            className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
+                            onClick={() => dispatch(open())}
+                        >
                             {currentPath === "/team" ? "хочу у вас работать" : "обсудить проект"}
                         </button>
                     </NavbarWrapper>
