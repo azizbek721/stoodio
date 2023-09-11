@@ -5,7 +5,7 @@ import Info from "../../components/main/info/Info";
 import Counter from "../../components/main/counter/Counter";
 import Founder from "../../components/main/founder/Founder";
 import Advantages from "../../components/main/advantages/Advantages";
-import Discuss from "../../components/main/discuss/Discuss";
+import Discuss from "../../containers/discuss/Discuss";
 import Steps from "../../components/main/steps/Steps";
 import ProjectManager from "../../components/main/projectManager/ProjectManager";
 import SaveMoney from "../../components/main/saveMoney/SaveMoney";

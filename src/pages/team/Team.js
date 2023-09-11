@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "../../containers/footer/Footer";
 import Navbar from "../../containers/navbar/Navbar";
-import Discuss from "../../components/main/discuss/Discuss";
+import Discuss from "../../containers/discuss/Discuss";
 
 const Team = () => {
     return (

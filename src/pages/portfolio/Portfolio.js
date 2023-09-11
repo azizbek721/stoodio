@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import Footer from "../../containers/footer/Footer";
 import Navbar from "../../containers/navbar/Navbar";
-import Discuss from "../../components/main/discuss/Discuss";
+import Discuss from "../../containers/discuss/Discuss";
 import {PortfolioWrapper} from "./PortfolioWrapper";
 import {Context} from "../../context/Context";
 import {Link} from "react-router-dom";

@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
-import Header from "../../components/portfolioParams/Header";
+import Header from "../../components/portfolioParams/header/Header";
 import Footer from "../../containers/footer/Footer";
 import {useParams} from "react-router-dom";
 import {Context} from "../../context/Context";
+import Discuss from "../../containers/discuss/Discuss";
+import Info from "../../components/portfolioParams/info/Info";
 
 const PortfolioById = () => {
 
@@ -17,6 +19,8 @@ const PortfolioById = () => {
     return (
         <div>
             <Header params={current} />
+            <Info params={current} />
+            <Discuss />
             <Footer />
         </div>
     );

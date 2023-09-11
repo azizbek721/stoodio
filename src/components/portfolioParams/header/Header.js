@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.scss"
-import Navbar from "../../containers/navbar/Navbar";
+import Navbar from "../../../containers/navbar/Navbar";
 
 const Header = ({params}) => {
     return (

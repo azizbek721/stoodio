@@ -1,7 +1,7 @@
 import React from 'react';
 // import "./Discuss.scss"
-import discuss from "../../../assets/videos/discuss-background.mp4";
-import useWindowSize from "../../../hooks/useWindowSize";
+import discuss from "../../assets/videos/discuss-background.mp4";
+import useWindowSize from "../../hooks/useWindowSize";
 import {useLocation, useNavigate} from "react-router-dom";
 import {DiscussWrapper} from "./DiscussWrapper";
 
