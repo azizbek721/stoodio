@@ -146,4 +146,37 @@ export const PortfolioWrapper = styled.div`
       }
     }
   }
+  
+  @media only screen and (max-width: 450px) {
+    .portfolio-header {
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+    }
+
+    .portfolio-section {
+      margin-top: 35px;
+
+      .portfolios {
+        grid-row-gap: 25px;
+        .portfolio {
+          img {
+            width: 100%;
+            height: 220px;
+          }
+
+          h5 {
+            line-height: 1.2;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 `
