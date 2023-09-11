@@ -1,17 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import {NavbarWrapper} from "./NavbarWrapper";
-import {Link, useLocation} from "react-router-dom";
-import navLogo from "../../assets/images/nav-logo.png"
-import whiteLogo from "../../assets/images/logo.png"
+import React, { useEffect, useState } from 'react';
+import { NavbarWrapper } from "./NavbarWrapper";
+import { Link, useLocation } from "react-router-dom";
+import navLogo from "../../assets/images/nav-logo.png";
+import whiteLogo from "../../assets/images/logo.png";
 import useWindowSize from "../../hooks/useWindowSize";
-import {dispatch} from "../../store/store";
-import {open} from "../../store/reducers/reducer";
+import { dispatch } from "../../store/store";
+import { open } from "../../store/reducers/reducer";
 import Menu from "./Menu";
-import {Icon} from '@iconify/react';
+import { Icon } from '@iconify/react';
 
 const Navbar = () => {
 
-    const {width} = useWindowSize();
+    const { width } = useWindowSize();
     const currentPath = useLocation().pathname;
 
     const [showButton, setShowButton] = useState(false);
@@ -38,7 +38,6 @@ const Navbar = () => {
         }
     };
 
-
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -46,7 +45,8 @@ const Navbar = () => {
         };
     }, []);
 
-    console.log(showButton)
+    // Добавьте условие для отображения "hamburger-btn" на экранах меньше 900px
+    const showHamburgerButton = width < 900 || showButton;
 
     return (
         <div style={currentPath === "/" || /^\/portfolio\/\d+$/.test(currentPath) ? activeStyle : notActive}>
@@ -69,12 +69,14 @@ const Navbar = () => {
                             </div>
                             <a href="tel:+998930000580" className="nav-tel">+99893 0000580</a>
                         </nav>
-                        <button
-                            className={showButton ? "hamburger-btn" : "hidden"}
-                            onClick={() => dispatch(open())}>
-                            <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28"
-                                  height="28"/>
-                        </button>
+                        {showHamburgerButton && (
+                            <button
+                                className="hamburger-btn"
+                                onClick={() => dispatch(open())}
+                            >
+                                <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28" height="28" />
+                            </button>
+                        )}
                         <button
                             className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
                             onClick={() => dispatch(open())}
@@ -82,7 +84,7 @@ const Navbar = () => {
                             {currentPath === "/team" ? "хочу у вас работать" : "обсудить проект"}
                         </button>
                     </NavbarWrapper>
-                    <Menu/>
+                    <Menu />
                 </>
             ) : (
                 <>
@@ -96,8 +98,22 @@ const Navbar = () => {
                                 <div></div>
                             )}
                         </nav>
+                        {showHamburgerButton && (
+                            <button
+                                className="hamburger-btn"
+                                onClick={() => dispatch(open())}
+                            >
+                                <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28" height="28" />
+                            </button>
+                        )}
+                        <button
+                            className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
+                            onClick={() => dispatch(open())}
+                        >
+                            {currentPath === "/team" ? "хочу у вас работать" : "обсудить проект"}
+                        </button>
                     </NavbarWrapper>
-                    <Menu/>
+                    <Menu />
                 </>
             )}
         </div>

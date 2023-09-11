@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   height: 790px;
+
   .project-params-background {
     position: absolute;
     top: 0;
@@ -12,5 +13,76 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+
+  .project-params-header {
+    .project-params-header-texts {
+      position: absolute;
+      bottom: 80px;
+      color: #ffffff;
+      width: 60%;
+      h3 {
+        font-size: 64px;
+        line-height: 67px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .project-params-container {
+    height: 817px;
+
+    .project-params-header {
+      .project-params-header-texts {
+        bottom: 80px;
+        left: 30px;
+        width: 80%;
+        h3 {
+          font-size: 64px;
+          line-height: 67px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .project-params-container {
+    height: 703px;
+
+    .project-params-header {
+      .project-params-header-texts {
+        bottom: 30px;
+        left: 30px;
+        width: 80%;
+        h3 {
+          font-size: 32px;
+          line-height: 32px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .project-params-container {
+    height: 420px;
+
+    .project-params-header {
+      .project-params-header-texts {
+        bottom: 30px;
+        left: 20px;
+        width: 90%;
+        h3 {
+          font-size: 32px;
+          line-height: 32px;
+          font-weight: 500;
+        }
+      }
+    }
   }
 }

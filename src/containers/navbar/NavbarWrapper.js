@@ -75,26 +75,42 @@ export const NavbarWrapper = styled.div`
                     height: 44.15px;
                 }
             }
-            .hamburger-btn {
-                top: 30px;
-                right: 30px;
-                width: 48px;
-                height: 48px;
-                padding: 10px;
-            }
+        }
+
+        .hamburger-btn {
+            top: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            padding: 10px;
+        }
+        .fixed-discuss-btn {
+            bottom: 30px;
+            left: 30px;
+            width: 200px;
+            height: 48px;
+            font-size: 16px;
+            line-height: 1.5;
         }
     }
   
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 500px) {
         padding-top: 20px;
-        .navbar {
-            .hamburger-btn {
-                top: 20px;
-                right: 20px;
-                width: 48px;
-                height: 48px;
-                padding: 10px;
-            }
+
+        .hamburger-btn {
+            top: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            padding: 10px;
+        }
+        .fixed-discuss-btn {
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+            height: 48px;
+            font-size: 16px;
+            line-height: 1.5;
         }
     }
 `
