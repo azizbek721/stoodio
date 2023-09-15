@@ -4,10 +4,12 @@ import Navbar from "../../containers/navbar/Navbar";
 import arrowRight from "../../assets/images/big-arrow-right.svg"
 import {VacanciesWrapper} from "./VacanciesWrapper";
 import {Context} from "../../context/Context";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Vacancies = () => {
 
     const {vacancies} = useContext(Context)
+    const { width } = useWindowSize()
 
     return (
         <div>
@@ -23,14 +25,16 @@ const Vacancies = () => {
                 <div className="jobs">
                     {vacancies.map((el) => (
                         <div className="job">
-                            <div className="container mx-auto job-inner flex justify-between items-center">
-                                <div className="job-info flex flex-col gap-y-4">
-                                    <h5>{el.position}</h5>
-                                    <p>{el.city}, {el.workTime}</p>
-                                </div>
-                                <div className="salary flex items-center gap-x-10">
-                                    <p>{el.salary}</p>
-                                    <img src={arrowRight} alt=""/>
+                            <div className="container mx-auto">
+                                <div className="job-inner flex justify-between items-center content-center">
+                                    <div className="job-info flex flex-col gap-y-4">
+                                        <h5>{el.position}</h5>
+                                        {width > 480 ? <p>{el.city}, {el.workTime}</p> : <p>{el.city}, {el.workTime} {el.salary}</p>}
+                                    </div>
+                                    <div className="salary flex items-center gap-x-10">
+                                        {width > 480 ? <p>{el.salary}</p> : ""}
+                                        <img src={arrowRight} alt=""/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +42,7 @@ const Vacancies = () => {
                 </div>
                 <div className="container mx-auto">
                     <div className="hr-over flex justify-between items-start">
-                        <div></div>
+                        <div className={width > 960 ? "block" : "hidden"}></div>
                         <div className="hr-div flex flex-col justify-end">
                             <h5>все наши вакансии на <a href="https://hh.uz/" target="blank">hh.uz</a></h5>
                             <div className="not-found-us">
