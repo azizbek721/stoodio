@@ -1,6 +1,5 @@
 import React from 'react';
 import {FooterWrapper} from "./FooterWrapper";
-// import footerLogo from "../../assets/images/logo.svg"
 import footerLogo from "../../assets/images/logo.png"
 import qrCode from "../../assets/images/qr-code.svg"
 import {Link} from "react-router-dom";
@@ -25,7 +24,7 @@ const Footer = () => {
                                 <div className="footer-contacts flex flex-col gap-y-5">
                                     <div className="phone-number">
                                         <p>каждый день с 9 до 20</p>
-                                        <a href="tel:+998951952828">+99893 0000580</a>
+                                        <a href="tel:+998930000580">+99893 0000580</a>
                                     </div>
                                     <div className="instagram-account">
                                         <p>instagram*</p>
@@ -42,7 +41,7 @@ const Footer = () => {
                         <div className="footer-center flex flex-col gap-y-7">
                             <Link to="/portfolio">портфолио</Link>
                             <Link to="/team">stoodio.team</Link>
-                            <Link to="/jobs">вакансии</Link>
+                            <Link to="/vacancies">вакансии</Link>
                             <Link to="/contacts">контакты</Link>
                         </div>
                         <div className="footer-right flex flex-col gap-y-10">
@@ -63,7 +62,7 @@ const Footer = () => {
                                 <div className="footer-contacts flex flex-col gap-y-2">
                                     <div className="phone-number">
                                         <p>каждый день с 9 до 20</p>
-                                        <a href="tel:+998951952828">+99893 0000580</a>
+                                        <a href="tel:+998930000580">+99893 0000580</a>
                                     </div>
                                     <div className="instagram-account">
                                         <p>instagram*</p>
@@ -81,7 +80,7 @@ const Footer = () => {
                         <div className="footer-center flex flex-col gap-y-7">
                             <Link to="/portfolio">портфолио</Link>
                             <Link to="/team">stoodio.team</Link>
-                            <Link to="/jobs">вакансии</Link>
+                            <Link to="/vacancies">вакансии</Link>
                             <Link to="/contacts">контакты</Link>
 
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
@@ -100,7 +99,7 @@ const Footer = () => {
                                 <div className="footer-contacts flex flex-col gap-y-4">
                                     <div className="phone-number">
                                         <p>каждый день с 9 до 20</p>
-                                        <a href="tel:+998951952828">+99893 0000580</a>
+                                        <a href="tel:+998930000580">+99893 0000580</a>
                                     </div>
                                     <div className="instagram-account">
                                         <p>instagram*</p>
@@ -113,7 +112,7 @@ const Footer = () => {
                         <div className="footer-center flex flex-col gap-y-6">
                             <Link to="/portfolio">портфолио</Link>
                             <Link to="/team">stoodio.team</Link>
-                            <Link to="/jobs">вакансии</Link>
+                            <Link to="/vacancies">вакансии</Link>
                             <Link to="/contacts">контакты</Link>
                         </div>
                         <div className="instagram-account">

@@ -20,7 +20,7 @@ const Discuss = () => {
                         <div className="discuss-text">
                             {currentPath === "/team" ? "стать частью команды" : "проектируйте будущее вместе с нами"}
                             {currentPath === "/team" ?
-                                <button className="discuss-btn" onClick={() => navigate('/jobs')}>показать вакансии</button> :
+                                <button className="discuss-btn" onClick={() => navigate('/vacancies')}>показать вакансии</button> :
                                 <button className="discuss-btn">обсудить проект</button>}
                         </div>
                     ) : (
@@ -29,7 +29,7 @@ const Discuss = () => {
                                 {currentPath === "/team" ? "стать частью команды" : "проектируйте будущее вместе с нами"}
                             </div>
                             {currentPath === "/team" ?
-                                <button className="discuss-btn" onClick={() => navigate('/jobs')}>показать вакансии</button> :
+                                <button className="discuss-btn" onClick={() => navigate('/vacancies')}>показать вакансии</button> :
                                 <button className="discuss-btn">обсудить проект</button>}
                         </>
                     )}

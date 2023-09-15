@@ -319,9 +319,102 @@ const ContextProvider = ({children}) => {
         },
     ];
 
+    const vacancies = [
+        {
+            id: 1,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 2,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 3,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 4,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 5,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 6,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 7,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 8,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        },
+        {
+            id: 9,
+            position: "Ведущий архитектор",
+            city: "Санкт-Петербург",
+            address: "Санкт-Петербург, ул. Социалистическая, 21",
+            workTime: "полная занятость",
+            experience: "3-6 лет",
+            salary: "от 60 000 ₽",
+            salaryType: "на руки"
+        }
+    ]
+
     return (
         <Context.Provider
-            value={{projects}}
+            value={{projects, vacancies}}
         >
             {children}
         </Context.Provider>

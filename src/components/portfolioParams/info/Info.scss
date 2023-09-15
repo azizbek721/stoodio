@@ -25,10 +25,9 @@
         font-weight: 400;
         color: #000000;
       }
-
-      &:nth-child(6) {
-        border-bottom: 1px solid rgba(131, 131, 131, 0.5);
-      }
+    }
+    .team {
+      border-bottom: 1px solid rgba(131, 131, 131, 0.5);
     }
   }
 }
@@ -101,7 +100,7 @@
         }
 
         &:nth-child(6) {
-          border-bottom: 1px solid rgba(131, 131, 131, 0.5);
+          border-bottom: 1px solid rgba(131, 131, 131, 0.5) !important;
           height: auto;
         }
       }

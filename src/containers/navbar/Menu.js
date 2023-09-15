@@ -44,7 +44,7 @@ const Menu = () => {
                                  onClick={closing}>портфолио</NavLink>
                         <NavLink to="/team" className={({isActive}) => isActive ? "active-link" : "menu-link"}
                                  onClick={closing}>stoodio.team</NavLink>
-                        <NavLink to="/jobs" className={({isActive}) => isActive ? "active-link" : "menu-link"}
+                        <NavLink to="/vacancies" className={({isActive}) => isActive ? "active-link" : "menu-link"}
                                  onClick={closing}>вакансии</NavLink>
                         <NavLink to="/contacts" className={({isActive}) => isActive ? "active-link" : "menu-link"}
                                  onClick={closing}>контакты</NavLink>
@@ -57,7 +57,7 @@ const Menu = () => {
                         </div>
                         <div className="menu-phone flex flex-col gap-y-2 5">
                             <p className="menu-contacts-label">instagram*</p>
-                            <a href="tel:+998951952828">+99893 0000580</a>
+                            <a href="tel:+998930000580">+99893 0000580</a>
                         </div>
                     </div>
                 </div>

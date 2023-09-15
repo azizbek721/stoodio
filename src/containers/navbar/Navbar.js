@@ -64,7 +64,7 @@ const Navbar = () => {
                             <div className="nav-center flex gap-x-5">
                                 <Link to="/portfolio">.портфолио</Link>
                                 <Link to="/team">stoodio.team</Link>
-                                <Link to="/jobs">.вакансии</Link>
+                                <Link to="/vacancies">.вакансии</Link>
                                 <Link to="/contacts">.контакты</Link>
                             </div>
                             <a href="tel:+998930000580" className="nav-tel">+99893 0000580</a>

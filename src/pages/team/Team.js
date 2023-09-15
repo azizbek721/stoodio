@@ -2,11 +2,13 @@ import React from 'react';
 import Footer from "../../containers/footer/Footer";
 import Navbar from "../../containers/navbar/Navbar";
 import Discuss from "../../containers/discuss/Discuss";
+import Header from "../../components/team/header/Header";
 
 const Team = () => {
     return (
         <div>
             <Navbar />
+            <Header />
             <div className="container mx-auto">
                 <h2>Team page</h2>
                 <p>
