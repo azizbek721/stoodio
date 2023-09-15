@@ -79,13 +79,14 @@
 
 @media only screen and (max-width: 500px) {
   .project-info-over {
-    margin: 75px 0;
+    margin: 65px 0;
 
     .project-info-div {
       width: 100%;
 
       .project-info {
         padding: 20px 0;
+        height: 40px;
         p {
           width: 160px;
           color: #a8a8a8;

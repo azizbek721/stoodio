@@ -26,7 +26,7 @@ const Portfolio = () => {
                         <div className="portfolios">
                             {projects.map((el) => (
                                 <Link to={`/portfolio/${el.id.toString()}`} className="portfolio" key={el.id}>
-                                    <img src={el.img} alt=""/>
+                                    <img src={el.images[0].img} alt=""/>
                                     <h5>{el.name}</h5>
                                 </Link>
                             ))}

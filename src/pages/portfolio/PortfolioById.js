@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {Context} from "../../context/Context";
 import Discuss from "../../containers/discuss/Discuss";
 import Info from "../../components/portfolioParams/info/Info";
+import Pictures from "../../components/portfolioParams/pictures/Pictures";
 
 const PortfolioById = () => {
 
@@ -20,6 +21,7 @@ const PortfolioById = () => {
         <div>
             <Header params={current} />
             <Info params={current} />
+            <Pictures params={current} />
             <Discuss />
             <Footer />
         </div>

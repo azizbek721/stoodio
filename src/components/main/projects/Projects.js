@@ -16,7 +16,7 @@ const Projects = () => {
                 <div className={`main-projects ${width <= 960 ? 'mobile' : ''}`}>
                     {projects.map((el) => (
                         <Link to={`/portfolio/${el.id.toString()}`} className="main-project" key={el.id}>
-                            <img src={el.img} alt="" />
+                            <img src={el.images[0].img} alt="" />
                             <h4>{el.name}</h4>
                         </Link>
                     ))}

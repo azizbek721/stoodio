@@ -9,6 +9,7 @@ import seven from "../assets/images/project7.jpeg";
 import eight from "../assets/images/project8.jpeg";
 import nine from "../assets/images/project9.jpeg";
 import ten from "../assets/images/project10.jpeg";
+import plane from "../assets/images/plane.jpeg";
 
 
 const Context = createContext();
@@ -18,7 +19,25 @@ const ContextProvider = ({children}) => {
     const projects = [
         {
             id: 1,
-            img: one,
+            images: [
+                {
+                    id: 1,
+                    img: one
+                },
+                {
+                    id: 2,
+                    img: one
+                },
+                {
+                    id: 3,
+                    img: one
+                },
+                {
+                    id: 4,
+                    img: one
+                }
+            ],
+            plane: plane,
             name: 'Коттедж в Пскове',
             workType: "Проектирование",
             type: "Загородный дом",
@@ -30,7 +49,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 2,
-            img: two,
+            images: [
+                {
+                    id: 1,
+                    img: two
+                },
+                {
+                    id: 2,
+                    img: two
+                },
+                {
+                    id: 3,
+                    img: two
+                },
+                {
+                    id: 4,
+                    img: two
+                }
+            ],
+            plane: plane,
             name: 'Квартира в Neva Towers',
             workType: "Проектирование",
             type: "Квартира",
@@ -42,7 +79,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 3,
-            img: three,
+            images: [
+                {
+                    id: 1,
+                    img: three
+                },
+                {
+                    id: 2,
+                    img: three
+                },
+                {
+                    id: 3,
+                    img: three
+                },
+                {
+                    id: 4,
+                    img: three
+                }
+            ],
+            plane: plane,
             name: 'Коттедж в скандинавском стиле',
             workType: "Проектирование",
             type: "Коттедж в скандинавском стиле",
@@ -54,7 +109,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 4,
-            img: four,
+            images: [
+                {
+                    id: 1,
+                    img: four
+                },
+                {
+                    id: 2,
+                    img: four
+                },
+                {
+                    id: 3,
+                    img: four
+                },
+                {
+                    id: 4,
+                    img: four
+                }
+            ],
+            plane: plane,
             name: 'Коттедж в КП Лисецкое, 122 м²',
             workType: "Проектирование",
             type: "Коттедж",
@@ -66,7 +139,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 5,
-            img: fife,
+            images: [
+                {
+                    id: 1,
+                    img: fife
+                },
+                {
+                    id: 2,
+                    img: fife
+                },
+                {
+                    id: 3,
+                    img: fife
+                },
+                {
+                    id: 4,
+                    img: fife
+                }
+            ],
+            plane: plane,
             name: 'Коттеджи в Сочи',
             workType: "Проектирование",
             type: "Коттеджи в Сочи",
@@ -78,7 +169,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 6,
-            img: six,
+            images: [
+                {
+                    id: 1,
+                    img: six
+                },
+                {
+                    id: 2,
+                    img: six
+                },
+                {
+                    id: 3,
+                    img: six
+                },
+                {
+                    id: 4,
+                    img: six
+                }
+            ],
+            plane: plane,
             name: 'Коттедж в Пскове',
             workType: "Проектирование",
             type: "Загородный дом",
@@ -90,7 +199,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 7,
-            img: seven,
+            images: [
+                {
+                    id: 1,
+                    img: seven
+                },
+                {
+                    id: 2,
+                    img: seven
+                },
+                {
+                    id: 3,
+                    img: seven
+                },
+                {
+                    id: 4,
+                    img: seven
+                }
+            ],
+            plane: plane,
             name: 'Офис креативного агентства Agency X',
             workType: "Проектирование",
             type: "Офисное пространство",
@@ -102,7 +229,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 8,
-            img: eight,
+            images: [
+                {
+                    id: 1,
+                    img: eight
+                },
+                {
+                    id: 2,
+                    img: eight
+                },
+                {
+                    id: 3,
+                    img: eight
+                },
+                {
+                    id: 4,
+                    img: eight
+                }
+            ],
+            plane: plane,
             name: 'Коттедж в КП Уютный Берег',
             workType: "Проектирование",
             type: "Загородный дом",
@@ -114,7 +259,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 9,
-            img: nine,
+            images: [
+                {
+                    id: 1,
+                    img: nine
+                },
+                {
+                    id: 2,
+                    img: nine
+                },
+                {
+                    id: 3,
+                    img: nine
+                },
+                {
+                    id: 4,
+                    img: nine
+                }
+            ],
+            plane: plane,
             name: 'Современный коттедж во Всеволожске',
             workType: "Проектирование",
             type: "Коттеджи",
@@ -126,7 +289,25 @@ const ContextProvider = ({children}) => {
         },
         {
             id: 10,
-            img: ten,
+            images: [
+                {
+                    id: 1,
+                    img: ten
+                },
+                {
+                    id: 2,
+                    img: ten
+                },
+                {
+                    id: 3,
+                    img: ten
+                },
+                {
+                    id: 4,
+                    img: ten
+                }
+            ],
+            plane: plane,
             name: 'Реконструкция ОКН с приспособлением под апарт-отель',
             workType: "",
             type: "Загородный дом",
