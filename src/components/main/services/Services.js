@@ -1,47 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./Services.scss"
 import arrowRight from "../../../assets/images/arrow-right.svg";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
 import useWindowSize from "../../../hooks/useWindowSize";
+import {Context} from "../../../context/Context";
 
 const Services = () => {
 
+    const { services } = useContext(Context)
     const {width} = useWindowSize();
-    const services = [
-        {
-            id: 1,
-            title: "архитектурное проектирование",
-            description: "Проектируем и строим современные коттеджи и коммерческие здания.",
-            description2: "От создания авторской концепции до разработки всех конструктивных и инженерных разделов с гарантией реализации. Работаем с объектами культурного наследия ОКН.",
-            price: "проекты от 250 000 ₽",
-            button: "рассчитать стоимость"
-        },
-        {
-            id: 2,
-            title: "дизайн интерьера",
-            description: "Создаем и реализуем премиальные интерьеры загородных домов, квартир, ресторанов, отелей, офисов и общественных пространств.",
-            description2: "Работаем в современных стилях с учетом бюджета заказчика.",
-            price: "проекты от 500 000 ₽ ",
-            button: "рассчитать стоимость"
-        },
-        {
-            id: 3,
-            title: "ландшафтный дизайн",
-            description: "Создаем лаконичные, функциональные и запоминающиеся проекты для загородных домов и общественных городских пространств.",
-            description2: "Придерживаемся принципов Органической архитектуры и Зеленого строительства.",
-            price: "проекты от 250 000 ₽ ",
-            button: "рассчитать стоимость"
-        },
-        {
-            id: 4,
-            title: " управление строительством",
-            description: "Комплексный подход к реализации наших проектов:  комплектация,  авторский надзор,  технический надзор,  юридическое сопровождение",
-            description2: "Гарантируем законность, точность и своевременность реализации проектных решений.",
-            price: "бесплатно при комплексном заказе",
-            button: "узнать подробности"
-        }
-    ]
     const slidesPerView =
         width > 1280 ? 3.2 :
             width > 900 ? 2.5 :

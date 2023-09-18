@@ -147,23 +147,21 @@
       }
       .team-head-texts {
         justify-content: normal;
-        grid-gap: 0;
+        grid-gap: 50px;
         margin: 50px 0 30px 0;
         h4 {
-          width: auto;
+          width: 60%;
           font-size: 18px;
           line-height: 22px;
         }
         p {
-          width: auto;
+          width: 40%;
           font-size: 14px;
           line-height: 22px;
         }
       }
       .team-head-buttons {
         grid-gap: 10px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
       }
     }
   }
