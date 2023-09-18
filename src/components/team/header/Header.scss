@@ -1,0 +1,209 @@
+.team-header {
+  padding-top: 100px;
+  padding-right: 5%;
+  .team-head {
+    width: 600px;
+    .team-head-title {
+      font-size: 90px;
+      line-height: 77px;
+      font-weight: 500;
+      position: relative;
+      span {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #0047bb;
+        position: absolute;
+        left: -20px;
+        bottom: 5px;
+      }
+    }
+    .team-head-texts {
+      margin: 55px 0 45px 0;
+      h4 {
+        width: 335px;
+        color: #000000;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 400;
+      }
+      p {
+        width: 200px;
+        color: #000000;
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 400;
+        opacity: 0.6;
+      }
+    }
+    .team-head-buttons {
+      grid-column-gap: 10px;
+      a {
+        width: 100%;
+        height: 40px;
+        padding: 10px 0;
+        color: #0047bb;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        border: 2px solid #0047bb;
+        border-radius: 2px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .team-header {
+    padding-top: 100px;
+    padding-right: 0;
+    .team-head {
+      width: 500px;
+      .team-head-title {
+        position: relative;
+        span {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: #0047bb;
+          position: absolute;
+          left: -20px;
+          bottom: 5px;
+        }
+      }
+      .team-head-texts {
+        p {
+          width: 200px;
+          color: #000000;
+          font-size: 17px;
+          line-height: 24px;
+          font-weight: 400;
+          opacity: 0.6;
+        }
+      }
+      .team-head-buttons {
+        grid-gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .team-header {
+    padding-top: 140px;
+    .team-head {
+      width: 100%;
+      .team-head-title {
+        font-size: 72px;
+        line-height: 61px;
+        margin-left: 20px;
+        span {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: #0047bb;
+          position: absolute;
+          left: -20px;
+          bottom: 5px;
+        }
+      }
+      .team-head-texts {
+        justify-content: normal;
+        grid-gap: 60px;
+        p {
+          width: 200px;
+          color: #000000;
+          font-size: 17px;
+          line-height: 24px;
+          font-weight: 400;
+          opacity: 0.6;
+        }
+      }
+      .team-head-buttons {
+        grid-gap: 10px;
+        display: flex;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .team-header {
+    padding-top: 120px;
+    .team-head {
+      .team-head-title {
+        font-size: 72px;
+        line-height: 61px;
+        margin-left: 20px;
+        span {
+          width: 12px;
+          height: 12px;
+          left: -15px;
+          bottom: 5px;
+        }
+      }
+      .team-head-texts {
+        justify-content: normal;
+        grid-gap: 0;
+        margin: 50px 0 30px 0;
+        h4 {
+          width: auto;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        p {
+          width: auto;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      .team-head-buttons {
+        grid-gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .team-header {
+    padding-top: 120px;
+    .team-head {
+      .team-head-title {
+        font-size: 48px;
+        line-height: 48px;
+        margin-left: 20px;
+        span {
+          width: 10px;
+          height: 10px;
+          left: -15px;
+          bottom: 5px;
+        }
+      }
+      .team-head-texts {
+        flex-direction: column;
+        grid-gap: 30px;
+        margin: 50px 0 30px 0;
+        h4 {
+          width: auto;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        p {
+          width: auto;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      .team-head-buttons {
+        grid-gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
