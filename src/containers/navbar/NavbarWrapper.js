@@ -107,10 +107,11 @@ export const NavbarWrapper = styled.div`
         .fixed-discuss-btn {
             bottom: 20px;
             left: 20px;
-            width: 200px;
+            width: auto;
             height: 48px;
             font-size: 16px;
             line-height: 1.5;
+            padding: 0 15px;
         }
     }
 `

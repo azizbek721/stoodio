@@ -3,12 +3,14 @@ import Footer from "../../containers/footer/Footer";
 import Navbar from "../../containers/navbar/Navbar";
 import Discuss from "../../containers/discuss/Discuss";
 import Header from "../../components/team/header/Header";
+import Work from "../../components/team/work/Work";
 
 const Team = () => {
     return (
         <div>
             <Navbar />
             <Header />
+            <Work />
             <div className="container mx-auto">
                 <h2>Team page</h2>
                 <p>
