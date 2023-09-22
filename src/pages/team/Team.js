@@ -5,6 +5,7 @@ import Discuss from "../../containers/discuss/Discuss";
 import Header from "../../components/team/header/Header";
 import Work from "../../components/team/work/Work";
 import Equipment from "../../components/team/equipment/Equipment";
+import Important from "../../components/team/important/Important";
 
 const Team = () => {
     return (
@@ -13,6 +14,7 @@ const Team = () => {
             <Header />
             <Work />
             <Equipment />
+            <Important />
             <div className="container mx-auto">
                 <h2>Team page</h2>
                 <p>
