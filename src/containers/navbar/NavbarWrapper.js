@@ -91,6 +91,7 @@ export const NavbarWrapper = styled.div`
             height: 48px;
             font-size: 16px;
             line-height: 1.5;
+            padding: 0 20px;
         }
     }
   

@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {close} from "../../store/reducers/reducer";
 import {MenuTop} from "./NavbarWrapper";
 import {Icon} from '@iconify/react';
-import menuLogo from "../../assets/images/logo.svg"
+import menuLogo from "../../assets/images/logo.png"
 import {Link, NavLink} from "react-router-dom";
 
 const Menu = () => {

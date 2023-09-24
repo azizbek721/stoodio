@@ -8,6 +8,7 @@ import Equipment from "../../components/team/equipment/Equipment";
 import Important from "../../components/team/important/Important";
 import WriteUs from "../../components/team/writeus/WriteUs";
 import Develop from "../../components/team/develop/Develop";
+import Employees from "../../components/team/employees/Employees";
 
 const Team = () => {
     return (
@@ -18,6 +19,7 @@ const Team = () => {
             <Equipment />
             <Important />
             <WriteUs />
+            <Employees />
             <Develop />
             <div className="container mx-auto">
                 <h2>Team page</h2>
