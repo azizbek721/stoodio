@@ -1,0 +1,252 @@
+.develop-media {
+  height: 820px;
+  margin-top: 135px;
+
+  video {
+    width: 430px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.develop {
+  margin: 183px 0;
+  padding-right: 5%;
+
+  .develop-title-div {
+    width: 310px;
+
+    .develop-title {
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 500;
+    }
+  }
+
+  .develop-right {
+    width: 640px;
+    .develop-div {
+      h1 {
+        color: #000000;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 500;
+      }
+      .develop-texts {
+        margin-top: 30px;
+        .develop-text {
+          width: 100%;
+          margin-bottom: 20px;
+          span {
+            width: 36px;
+            height: 2.29px;
+            background-color: #000000;
+          }
+          p {
+            width: 100%;
+            color: #000000;
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 400;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .develop-media {
+    height: 664px;
+    grid-column-gap: 25px;
+
+    video {
+      width: 340px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .develop-media {
+    height: 495px;
+    margin-top: 120px;
+    grid-column-gap: 35px;
+
+    video {
+      width: 210px;
+      height: 395px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .develop {
+    margin: 180px 0;
+    flex-direction: column;
+    padding-right: 0;
+
+    .develop-title-div {
+      width: 100%;
+
+      .develop-title {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 500;
+      }
+    }
+
+    .develop-right {
+      width: 100%;
+      margin-top: 60px;
+      grid-gap: 60px;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .develop-media {
+    height: 355px;
+    margin-top: 80px;
+    grid-column-gap: 20px;
+
+    video {
+      width: 190px;
+      height: 100%;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .develop {
+    margin: 105px 0;
+    flex-direction: column;
+
+    .develop-title-div {
+      background-color: #ffffff;
+      width: 100%;
+      height: 80px;
+      align-items: center;
+      z-index: 1;
+
+      .develop-title {
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 500;
+      }
+    }
+
+    .develop-right {
+      width: 100%;
+      grid-row-gap: 20px;
+      margin-top: 20px;
+      .develop-div {
+        h1 {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .develop-texts {
+          margin-top: 30px;
+          .develop-text {
+            width: 100%;
+            margin-bottom: 20px;
+            grid-column-gap: 20px;
+            span {
+              width: 26.3px;
+              height: 2.29px;
+            }
+            p {
+              width: 100%;
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .develop-media {
+    height: auto;
+    margin-top: 90px;
+    flex-direction: column-reverse;
+    grid-row-gap: 35px;
+
+    video {
+      width: 100%;
+      height: 610px;
+    }
+
+    img {
+      width: 100%;
+      height: 540px;
+    }
+  }
+
+  .develop {
+    margin: 95px 0;
+    .develop-title-div {
+
+      .develop-title {
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 500;
+      }
+    }
+
+    .develop-right {
+      .develop-div {
+        .develop-texts {
+          margin-top: 30px;
+          .develop-text {
+            width: 100%;
+            margin-bottom: 20px;
+            grid-column-gap: 20px;
+            span {
+              width: 26.3px;
+              height: 2.29px;
+            }
+            p {
+              width: 100%;
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .develop-media {
+    margin-top: 60px;
+    grid-row-gap: 20px;
+
+    video {
+      width: 100%;
+      height: 480px;
+    }
+
+    img {
+      width: 100%;
+      height: 420px;
+    }
+  }
+
+  .develop {
+    margin: 80px 0;
+  }
+}
