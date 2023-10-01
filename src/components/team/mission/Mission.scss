@@ -1,0 +1,74 @@
+.mission-bg {
+  background: #757575;
+  height: 750px;
+  .mission {
+    padding: 160px 0;
+    color: white;
+    .mission-title {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      letter-spacing: 32px;
+      text-transform: uppercase;
+    }
+    h1 {
+      width: 850px;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 500;
+    }
+    h3 {
+      width: 650px;
+      font-size: 24px;
+      line-height: 31px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .mission-bg {
+    height: auto;
+    .mission {
+      padding: 140px 0;
+      .mission-title {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      h1 {
+        width: 90%;
+        font-size: 40px;
+        line-height: 48px;
+      }
+      h3 {
+        width: 90%;
+        font-size: 24px;
+        line-height: 31px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .mission-bg {
+    .mission {
+      padding: 80px 0;
+      grid-row-gap: 30px;
+      .mission-title {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 12px;
+      }
+      h1 {
+        width: 100%;
+        font-size: 24px;
+        line-height: 31px;
+      }
+      h3 {
+        width: 100%;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
