@@ -1,0 +1,146 @@
+.principles {
+  margin-top: 183px;
+  padding-right: 5%;
+  .principles-title {
+    width: 380px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 500;
+  }
+  .principles-right {
+    width: 640px;
+    .principles-div {
+      h1 {
+        color: #000000;
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 400;
+      }
+      span {
+        width: 50px;
+        height: 2.29px;
+        background: #000;
+      }
+      p {
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .principles {
+    margin-top: 180px;
+    flex-direction: column;
+    padding-right: 0;
+    .principles-title {
+      width: 85%;
+      font-size: 38px;
+      line-height: 46px;
+    }
+    .principles-right {
+      width: 90%;
+      margin-top: 50px;
+      .principles-div {
+        h1 {
+          font-size: 26px;
+          line-height: 32px;
+          font-weight: 400;
+        }
+        span {
+          width: 50px;
+          height: 2.29px;
+          background: #000;
+        }
+        p {
+          font-size: 17px;
+          line-height: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .principles {
+    margin-top: 105px;
+    .principles-title {
+      width: 90%;
+      font-size: 24px;
+      line-height: 31px;
+    }
+    .principles-right {
+      width: 95%;
+      margin-top: 50px;
+      .principles-div {
+        h1 {
+          font-size: 26px;
+          line-height: 32px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .principles {
+    margin-top: 95px;
+    .principles-title {
+      width: 100%;
+      font-size: 24px;
+      line-height: 31px;
+    }
+    .principles-right {
+      width: 100%;
+      margin-top: 45px;
+      .principles-div {
+        h1 {
+          font-size: 26px;
+          line-height: 32px;
+          font-weight: 400;
+        }
+        p {
+          font-size: 13px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .principles {
+    margin-top: 80px;
+    .principles-title {
+      width: 100%;
+      font-size: 24px;
+      line-height: 31px;
+    }
+    .principles-right {
+      width: 100%;
+      margin-top: 35px;
+      .principles-div {
+        align-items: start;
+        grid-column-gap: 10px;
+        h1 {
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: 400;
+        }
+        span {
+          width: 22px;
+          height: 1.84px;
+          margin-top: 10px;
+        }
+        p {
+          font-size: 13px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

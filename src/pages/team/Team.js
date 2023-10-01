@@ -10,6 +10,8 @@ import WriteUs from "../../components/team/writeus/WriteUs";
 import Develop from "../../components/team/develop/Develop";
 import Employees from "../../components/team/employees/Employees";
 import Mission from "../../components/team/mission/Mission";
+import Principles from "../../components/team/principles/Principles";
+import Values from "../../components/team/values/Values";
 
 const Team = () => {
     return (
@@ -23,6 +25,8 @@ const Team = () => {
             <Employees />
             <Develop />
             <Mission />
+            <Principles />
+            <Values />
             <Discuss/>
             <Footer />
         </div>
