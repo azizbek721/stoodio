@@ -45,12 +45,11 @@ const Navbar = () => {
         };
     }, []);
 
-    // Добавьте условие для отображения "hamburger-btn" на экранах меньше 900px
-    const showHamburgerButton = width < 900 || showButton;
+    const showHamburgerButton = width <= 1024 || showButton;
 
     return (
         <div style={currentPath === "/" || /^\/portfolio\/\d+$/.test(currentPath) ? activeStyle : notActive}>
-            {width > 1024 ? (
+            {width > 1025 ? (
                 <>
                     <NavbarWrapper>
                         <nav className="navbar container mx-auto flex justify-between items-start">
@@ -83,6 +82,7 @@ const Navbar = () => {
                         >
                             {currentPath === "/team" ? "хочу у вас работать" : "обсудить проект"}
                         </button>
+                        <button></button>
                     </NavbarWrapper>
                     <Menu />
                 </>

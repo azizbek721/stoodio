@@ -1,0 +1,151 @@
+.write-us-over {
+  background: #A9AAAB;
+  height: 1050px;
+  padding-top: 100px;
+  position: relative;
+  .write-us-texts {
+    color: white;
+    h3 {
+      font-size: 24px;
+      line-height: 31px;
+      font-weight: 400;
+      width: 80%;
+    }
+    p {
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 400;
+      opacity: 0.7;
+      width: 50%;
+    }
+    button {
+      width: 222px;
+      height: 48px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      border: 2px solid white;
+      border-radius: 2px;
+      opacity: 0.9;
+      z-index: 1;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+  .write-us-bg {
+    height: 745px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .write-us-over {
+    //height: 950px;
+    .write-us-texts {
+      h3 {
+        font-size: 24px;
+        line-height: 31px;
+        width: 85%;
+      }
+      p {
+        font-size: 17px;
+        line-height: 24px;
+      }
+      button {
+        width: 222px;
+        height: 48px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    .write-us-bg {
+      height: 640px;
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .write-us-over {
+    padding-top: 65px;
+    height: 795px;
+    .write-us-texts {
+      h3 {
+        font-size: 24px;
+        line-height: 31px;
+        width: 90%;
+      }
+      p {
+        font-size: 17px;
+        line-height: 24px;
+        width: 90%;
+      }
+      button {
+        width: 222px;
+        height: 48px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    .write-us-bg {
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .write-us-over {
+    padding-top: 55px;
+    height: 695px;
+    .write-us-texts {
+      h3 {
+        font-size: 18px;
+        line-height: 22px;
+        width: 90%;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        width: 90%;
+      }
+      button {
+        width: 178px;
+        height: 48px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .write-us-bg {
+      height: 450px;
+    }
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .write-us-over {
+    .write-us-bg {
+      height: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .write-us-over {
+    padding-top: 45px;
+    .write-us-texts {
+      text-align: left !important;
+      button {
+        width: 145px;
+        height: 48px;
+      }
+    }
+    .write-us-bg {
+      height: 370px;
+    }
+  }
+}
