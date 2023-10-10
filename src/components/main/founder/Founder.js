@@ -14,7 +14,7 @@ const Founder = () => {
                         <div className="founder-info flex flex-col gap-y-4">
                             <h3 className="name">Зиёдилла <br/> Наврузов</h3>
                             <p className="job">основатель <br/> бюро</p>
-                        </div>
+                        </div>   
                     </div>
                     <div className="founder-text flex flex-col justify-center items-start content-center">
                         <Icon icon="ep:d-arrow-left" color="white" width="52" height="52" fontSize="100px" className=""/>
