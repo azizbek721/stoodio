@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Founder.scss"
-import founder from "../../../assets/images/founder.PNG"
+import founder from "../../../assets/images/founder.png"
 import secondFounder from "../../../assets/images/second-founder.png"
 import {Icon} from '@iconify/react';
 
