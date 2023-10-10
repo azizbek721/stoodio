@@ -12,23 +12,25 @@ import Employees from "../../components/team/employees/Employees";
 import Mission from "../../components/team/mission/Mission";
 import Principles from "../../components/team/principles/Principles";
 import Values from "../../components/team/values/Values";
+import Facts from "../../components/team/facts/Facts";
 
 const Team = () => {
     return (
         <div>
-            <Navbar />
-            <Header />
-            <Work />
-            <Equipment />
-            <Important />
-            <WriteUs />
-            <Employees />
-            <Develop />
-            <Mission />
-            <Principles />
-            <Values />
+            <Navbar/>
+            <Header/>
+            <Work/>
+            <Equipment/>
+            <Important/>
+            {/*<WriteUs/>*/}
+            {/*<Employees/>*/}
+            {/*<Develop/>*/}
+            {/*<Mission/>*/}
+            {/*<Principles/>*/}
+            {/*<Values/>*/}
+            {/*<Facts/>*/}
             <Discuss/>
-            <Footer />
+            <Footer/>
         </div>
     );
 };

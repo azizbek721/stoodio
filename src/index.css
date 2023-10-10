@@ -21,7 +21,6 @@
   z-index: 998; /* Чуть меньше, чем у вашего меню */
 }
 
-
 @media (max-width: 2174px) and (min-width: 2000px) {
   .container {
     padding: 0 30px;

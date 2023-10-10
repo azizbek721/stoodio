@@ -15,16 +15,16 @@ const Counter = () => {
         <div className="container mx-auto">
             <div className="counters flex justify-between items-start">
                 <div className="year-count flex flex-col gap-y-8">
-                    <AnimatedCounter number={16}/>
+                    <AnimatedCounter number={5}/>
                     <p>лет проектируем <br/> и строим</p>
                 </div>
                 <div className="projects-count flex flex-col gap-y-8">
-                    <AnimatedCounter number={300} suffix="+"/>
+                    <AnimatedCounter number={30} suffix="+"/>
                     <p>реализованных <br/> проектов</p>
                 </div>
                 <div className="cities-count flex flex-col gap-y-8">
-                    <AnimatedCounter number={6}/>
-                    <p>стран и 20 городов <br/> с нашими проектами</p>
+                    <AnimatedCounter number={2}/>
+                    <p>городов с нашими <br/> проектами</p>
                 </div>
             </div>
         </div>

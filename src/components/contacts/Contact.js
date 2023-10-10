@@ -44,8 +44,9 @@ const Contact = () => {
                 <img className="office-img" src={office} alt=""/>
             </div>
             <div className="my-12">
-                <iframe height="500" width="100%" frameBorder="0" allowFullScreen
-                        src="//maps.google.com/maps?q=41.285628,69.166139&z=15&output=embed"/>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A4de7420a2ee4c79b5c1a85acea96bd6138d853e614aafd870d3c9997f310a200&amp;source=constructor"
+                    width="100%" height="500" frameBorder="0"></iframe>
             </div>
         </div>
     );

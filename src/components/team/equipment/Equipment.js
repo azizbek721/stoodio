@@ -34,23 +34,23 @@ const Equipment = () => {
                     <h3 className="equipment-title">топовое оборудование и софт</h3>
                 </div>
                 <div className="equipment-right flex flex-col gap-y-14">
-                    <div className="equipment-div">
-                        <h1>мы используем Битрикс24, Scrum, Kanban-доски, Miro и другие инструменты автоматизации</h1>
-                        <div className="equipment-texts">
-                            <div className="equipment-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>ты научишься работать на 30% быстрее за счет автоматизации работы</p>
-                            </div>
-                            <div className="equipment-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>ты будешь успевать делать больше, а значит больше зарабатывать</p>
-                            </div>
-                            <div className="equipment-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>ты четко понимаешь задачи, сроки и последовательность шагов при работе над проектом</p>
-                            </div>
-                        </div>
-                    </div>
+                    {/*<div className="equipment-div">*/}
+                    {/*    <h1>мы используем Битрикс24, Scrum, Kanban-доски, Miro и другие инструменты автоматизации</h1>*/}
+                    {/*    <div className="equipment-texts">*/}
+                    {/*        <div className="equipment-text flex items-center gap-x-8">*/}
+                    {/*            <span></span>*/}
+                    {/*            <p>ты научишься работать на 30% быстрее за счет автоматизации работы</p>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="equipment-text flex items-center gap-x-8">*/}
+                    {/*            <span></span>*/}
+                    {/*            <p>ты будешь успевать делать больше, а значит больше зарабатывать</p>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="equipment-text flex items-center gap-x-8">*/}
+                    {/*            <span></span>*/}
+                    {/*            <p>ты четко понимаешь задачи, сроки и последовательность шагов при работе над проектом</p>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     <div className="equipment-div">
                         <h1>наша команда работает в программах Autodesk Revit и Autodesk 3ds Max</h1>
                         <div className="equipment-texts">

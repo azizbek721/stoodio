@@ -25,7 +25,7 @@ const Main = () => {
             <Projects />
             <Useful />
             <Services />
-            <ProjectManager />
+            {/*<ProjectManager />*/}
             <Steps />
             <Discuss />
             <Footer/>

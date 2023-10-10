@@ -44,8 +44,8 @@ const Menu = () => {
                                  onClick={closing}>портфолио</NavLink>
                         <NavLink to="/team" className={({isActive}) => isActive ? "active-link" : "menu-link"}
                                  onClick={closing}>stoodio.team</NavLink>
-                        <NavLink to="/vacancies" className={({isActive}) => isActive ? "active-link" : "menu-link"}
-                                 onClick={closing}>вакансии</NavLink>
+                        {/*<NavLink to="/vacancies" className={({isActive}) => isActive ? "active-link" : "menu-link"}*/}
+                        {/*         onClick={closing}>вакансии</NavLink>*/}
                         <NavLink to="/contacts" className={({isActive}) => isActive ? "active-link" : "menu-link"}
                                  onClick={closing}>контакты</NavLink>
                     </div>

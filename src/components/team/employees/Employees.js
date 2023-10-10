@@ -50,14 +50,14 @@ const Employees = () => {
                                 <span></span>
                                 <p>познакомим тебя с командной</p>
                             </div>
-                            <div className="employees-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>внедрим в работу через битрикс24</p>
-                            </div>
-                            <div className="employees-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>обучим scrum-технологии работы над проектами</p>
-                            </div>
+                            {/*<div className="employees-text flex items-center gap-x-8">*/}
+                            {/*    <span></span>*/}
+                            {/*    <p>внедрим в работу через битрикс24</p>*/}
+                            {/*</div>*/}
+                            {/*<div className="employees-text flex items-center gap-x-8">*/}
+                            {/*    <span></span>*/}
+                            {/*    <p>обучим scrum-технологии работы над проектами</p>*/}
+                            {/*</div>*/}
                             <div className="employees-text flex items-center gap-x-8">
                                 <span></span>
                                 <p>обозначим четкий список задач на период 1-2-3 месяца с понятными результатами и
@@ -76,32 +76,32 @@ const Employees = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="employees-div">
-                        <h1>освоиться в команде, спланировать отпуск, решить любой другой организационный или
-                            корпоративный вопрос поможет наш HR</h1>
-                        <div className="employees-texts">
-                            <div className="employees-text flex items-center gap-x-8">
-                                <div className="hidden-span"></div>
-                                <p>также на период адаптации к тебе прикрепляется наставник, который:</p>
-                            </div>
-                            <div className="employees-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>ставит задачи</p>
-                            </div>
-                            <div className="employees-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>дает обратную связь по работе</p>
-                            </div>
-                            <div className="employees-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>обучает дизайн-коду бюро</p>
-                            </div>
-                            <div className="employees-text flex items-center gap-x-8">
-                                <span></span>
-                                <p>помогает адаптироваться к технологиям разработки проектов</p>
-                            </div>
-                        </div>
-                    </div>
+                    {/*<div className="employees-div">*/}
+                    {/*    <h1>освоиться в команде, спланировать отпуск, решить любой другой организационный или*/}
+                    {/*        корпоративный вопрос поможет наш HR</h1>*/}
+                    {/*    <div className="employees-texts">*/}
+                    {/*        <div className="employees-text flex items-center gap-x-8">*/}
+                    {/*            <div className="hidden-span"></div>*/}
+                    {/*            <p>также на период адаптации к тебе прикрепляется наставник, который:</p>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="employees-text flex items-center gap-x-8">*/}
+                    {/*            <span></span>*/}
+                    {/*            <p>ставит задачи</p>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="employees-text flex items-center gap-x-8">*/}
+                    {/*            <span></span>*/}
+                    {/*            <p>дает обратную связь по работе</p>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="employees-text flex items-center gap-x-8">*/}
+                    {/*            <span></span>*/}
+                    {/*            <p>обучает дизайн-коду бюро</p>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="employees-text flex items-center gap-x-8">*/}
+                    {/*            <span></span>*/}
+                    {/*            <p>помогает адаптироваться к технологиям разработки проектов</p>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </div>

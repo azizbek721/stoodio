@@ -33,21 +33,17 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p className="footer-left-text">
-                                Социальная сеть Instagram принадлежит компании Meta Platforms Inc., которая запрещена на
-                                территории РФ в связи с осуществлением экстремистской деятельности.
-                            </p>
                         </div>
                         <div className="footer-center flex flex-col gap-y-7">
                             <Link to="/portfolio">портфолио</Link>
                             <Link to="/team">stoodio.team</Link>
-                            <Link to="/vacancies">вакансии</Link>
+                            {/*<Link to="/vacancies">вакансии</Link>*/}
                             <Link to="/contacts">контакты</Link>
                         </div>
                         <div className="footer-right flex flex-col gap-y-10">
                             <Link to="/policy">политика <br/> конфиденциальности</Link>
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
-                            <p>© 2006—2023 <br/>Архитектурное бюро Зиядилло Наврузовой Stoodio.uz</p>
+                            <p>© 2019—2023 <br/>Архитектурное бюро Зиядилло Наврузовой Stoodio.uz</p>
                         </div>
                     </div>
                 ) : width > 480 ? (
@@ -71,20 +67,16 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p className="footer-left-text">
-                                Социальная сеть Instagram принадлежит компании Meta Platforms Inc., которая запрещена на
-                                территории РФ в связи с осуществлением экстремистской деятельности.
-                            </p>
                             <Link to="/policy" className="policy-link">политика конфиденциальности</Link>
                         </div>
                         <div className="footer-center flex flex-col gap-y-7">
                             <Link to="/portfolio">портфолио</Link>
                             <Link to="/team">stoodio.team</Link>
-                            <Link to="/vacancies">вакансии</Link>
+                            {/*<Link to="/vacancies">вакансии</Link>*/}
                             <Link to="/contacts">контакты</Link>
 
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
-                            <p>© 2006—2023 <br/>Архитектурное бюро Зиядиллы Наврузовой Stoodio.uz</p>
+                            <p>© 2019—2023 <br/>Архитектурное бюро Зиядиллы Наврузовой Stoodio.uz</p>
                         </div>
 
                     </div>
@@ -112,7 +104,7 @@ const Footer = () => {
                         <div className="footer-center flex flex-col gap-y-6">
                             <Link to="/portfolio">портфолио</Link>
                             <Link to="/team">stoodio.team</Link>
-                            <Link to="/vacancies">вакансии</Link>
+                            {/*<Link to="/vacancies">вакансии</Link>*/}
                             <Link to="/contacts">контакты</Link>
                         </div>
                         <div className="instagram-account">
@@ -123,12 +115,8 @@ const Footer = () => {
                         <div className="footer-right flex flex-col gap-y-7">
                             <Link to="/policy">политика конфиденциальности</Link>
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
-                            <p>© 2006—2023 <br/>Архитектурное бюро Зиядиллы Наврузовой Stoodio.uz</p>
+                            <p>© 2019—2023 <br/>Архитектурное бюро Зиядиллы Наврузовой Stoodio.uz</p>
                         </div>
-                        <p className="footer-mobile-bottom-text mt-5">
-                            Социальная сеть Instagram принадлежит компании Meta Platforms Inc., которая запрещена на
-                            территории РФ в связи с осуществлением экстремистской деятельности.
-                        </p>
                     </div>
                 )}
             </div>
