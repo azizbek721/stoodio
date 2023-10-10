@@ -1,13 +1,14 @@
 import React from 'react';
 import "./Founder.scss"
-import founder from "../../../assets/images/founder.png"
+import founder from "../../../assets/images/founder.PNG"
+import secondFounder from "../../../assets/images/second-founder.png"
 import {Icon} from '@iconify/react';
 
 const Founder = () => {
     return (
         <div className="founder-over">
             <div className="container mx-auto">
-                <div className="founder-div flex justify-between">
+                <div className="founder-div flex justify-around">
                     <div className="founder">
                         <img src={founder} alt=""/>
                         <div className="founder-info flex flex-col gap-y-4">
@@ -23,13 +24,13 @@ const Founder = () => {
                         </h5>
                         <Icon icon="ep:d-arrow-right" color="white" width="52" height="52" className="right-icon"/>
                     </div>
-                    {/*<div className="founder second-founder">*/}
-                    {/*    <img src={founder} alt=""/>*/}
-                    {/*    <div className="founder-info flex flex-col gap-y-4">*/}
-                    {/*        <h3 className="name">Зиёдилла <br/> Наврузов</h3>*/}
-                    {/*        <p className="job">основатель <br/> бюро</p>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
+                    <div className="second-founder">
+                        <img src={secondFounder} alt=""/>
+                        <div className="second-founder-info flex flex-col gap-y-4">
+                            <h3 className="name">Рахматулло <br/> Наврузов</h3>
+                            <p className="job">основатель <br/> бюро</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
