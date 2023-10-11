@@ -5,10 +5,13 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
 import useWindowSize from "../../../hooks/useWindowSize";
 import {Context} from "../../../context/Context";
+import {dispatch} from "../../../store/store";
+import {openModal} from "../../../store/reducers/discussReducer";
+import DiscussModal from "../../../containers/modals/DiscussModal";
 
 const Services = () => {
 
-    const { services } = useContext(Context)
+    const {services} = useContext(Context)
     const {width} = useWindowSize();
     const slidesPerView =
         width > 1280 ? 3.2 :
@@ -50,12 +53,14 @@ const Services = () => {
                                         </div>
                                         <div className="flex flex-col gap-y-5">
                                             <h4 className="services-price">{el.price}</h4>
-                                            <button className="calculate-cost">{el.button}</button>
+                                            <button className="calculate-cost"
+                                                    onClick={() => dispatch(openModal())}>{el.button}</button>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                         ))}
+                        <DiscussModal/>
                     </Swiper>
                 </div>
             </div>

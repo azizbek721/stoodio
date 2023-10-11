@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Modal} from './DiscussWrapper';
+import {Modal} from '../discuss/DiscussWrapper';
 import {useDispatch, useSelector} from 'react-redux';
 import {closeModal} from '../../store/reducers/discussReducer';
 import axios from 'axios';
