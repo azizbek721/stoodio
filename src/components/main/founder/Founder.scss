@@ -7,9 +7,9 @@
     .founder {
       img {
         width: 263px;
-        height: 433px;
+        height: 483px;
         position: absolute;
-        top: -60px;
+        bottom: 0;
         left: 5%;
         object-fit: cover;
       }
@@ -189,11 +189,38 @@
   .founder-div {
     justify-content: space-between;
     .founder {
+      img {
+        width: 253px !important;
+        height: 483px;
+        position: absolute;
+        bottom: 0;
+        left: 2% !important;
+        object-fit: cover;
+      }
       .founder-info {
         position: absolute;
         bottom: 80px;
-        left: 140px !important;
+        left: 100px !important;
       }
+    }
+    .second-founder {
+      img {
+        width: 253px !important;
+        height: 470px;
+        position: absolute;
+        top: -95px;
+        right: 2% !important;
+        object-fit: cover;
+      }
+      .second-founder-info {
+        position: absolute;
+        bottom: 140px;
+        right: 5% !important;
+        text-align: right;
+      }
+    }
+    .founder-text {
+      width: 550px;
     }
   }
 }

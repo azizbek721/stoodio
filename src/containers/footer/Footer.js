@@ -43,7 +43,7 @@ const Footer = () => {
                         <div className="footer-right flex flex-col gap-y-10">
                             <Link to="/policy">политика <br/> конфиденциальности</Link>
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
-                            <p>© 2019—2023 <br/>Архитектурное бюро Зиядилло Наврузовой Stoodio.uz</p>
+                            <p>© 2019—2023 <br/>Архитектурное бюро STOODIO</p>
                         </div>
                     </div>
                 ) : width > 480 ? (
@@ -76,7 +76,7 @@ const Footer = () => {
                             <Link to="/contacts">контакты</Link>
 
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
-                            <p>© 2019—2023 <br/>Архитектурное бюро Зиядиллы Наврузовой Stoodio.uz</p>
+                            <p>© 2019—2023 <br/>Архитектурное бюро STOODIO</p>
                         </div>
 
                     </div>
@@ -115,7 +115,7 @@ const Footer = () => {
                         <div className="footer-right flex flex-col gap-y-7">
                             <Link to="/policy">политика конфиденциальности</Link>
                             <span>Stoodio.uz является зарегистрированным товарным знаком №910417</span>
-                            <p>© 2019—2023 <br/>Архитектурное бюро Зиядиллы Наврузовой Stoodio.uz</p>
+                            <p>© 2019—2023 <br/>Архитектурное бюро STOODIO</p>
                         </div>
                     </div>
                 )}

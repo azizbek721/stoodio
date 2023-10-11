@@ -1,16 +1,15 @@
 import React from 'react';
 import discuss from "../../assets/videos/discuss-background.mp4";
 import useWindowSize from "../../hooks/useWindowSize";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {DiscussWrapper} from "./DiscussWrapper";
-import DiscussModal from "./DiscussModal";
+import DiscussModal from "../modals/DiscussModal";
 import {dispatch} from "../../store/store";
 import {openModal} from "../../store/reducers/discussReducer";
 
 const Discuss = () => {
 
     const {width} = useWindowSize();
-    const navigate = useNavigate();
     const currentPath = useLocation().pathname;
 
     return (

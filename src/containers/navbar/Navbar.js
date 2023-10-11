@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { NavbarWrapper } from "./NavbarWrapper";
-import { Link, useLocation } from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {NavbarWrapper} from "./NavbarWrapper";
+import {Link, useLocation} from "react-router-dom";
 import navLogo from "../../assets/images/nav-logo.png";
 import whiteLogo from "../../assets/images/logo.png";
 import useWindowSize from "../../hooks/useWindowSize";
-import { dispatch } from "../../store/store";
-import { open } from "../../store/reducers/reducer";
-import { openModal } from "../../store/reducers/discussReducer";
+import {dispatch} from "../../store/store";
+import {open} from "../../store/reducers/reducer";
+import {openModal} from "../../store/reducers/discussReducer";
 import Menu from "./Menu";
-import { Icon } from '@iconify/react';
-import DiscussModal from "../discuss/DiscussModal";
+import {Icon} from '@iconify/react';
+import DiscussModal from "../modals/DiscussModal";
+import ResumeModal from "../modals/ResumeModal";
+import {openResumeModal} from "../../store/reducers/resumeReducer";
 
 const Navbar = () => {
 
-    const { width } = useWindowSize();
+    const {width} = useWindowSize();
     const currentPath = useLocation().pathname;
 
     const [showButton, setShowButton] = useState(false);
@@ -57,7 +59,7 @@ const Navbar = () => {
                         <nav className="navbar container mx-auto flex justify-between items-start">
                             {currentPath !== "/" ? (
                                 <Link to="/" className="nav-logo">
-                                    <img src={/^\/portfolio\/\d+$/.test(currentPath) ? whiteLogo : navLogo} alt="" />
+                                    <img src={/^\/portfolio\/\d+$/.test(currentPath) ? whiteLogo : navLogo} alt=""/>
                                 </Link>
                             ) : (
                                 <div></div>
@@ -75,19 +77,29 @@ const Navbar = () => {
                                 className="hamburger-btn"
                                 onClick={() => dispatch(open())}
                             >
-                                <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28" height="28" />
+                                <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28"
+                                      height="28"/>
                             </button>
                         )}
-                        <button
-                            className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
-                            onClick={() => dispatch(openModal())}
-                        >
-                            {currentPath === "/team" ? "хочу у вас работать" : "обсудить проект"}
-                        </button>
-                        <button></button>
+                        {currentPath === "/team" ? (
+                            <button
+                                className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
+                                onClick={() => dispatch(openResumeModal())}
+                            >
+                                хочу у вас работать
+                            </button>
+                        ) : (
+                            <button
+                                className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
+                                onClick={() => dispatch(openModal())}
+                            >
+                                обсудить проект
+                            </button>
+                        )}
                     </NavbarWrapper>
-                    <Menu />
-                    <DiscussModal />
+                    <Menu/>
+                    <DiscussModal/>
+                    <ResumeModal/>
                 </>
             ) : (
                 <>
@@ -95,7 +107,7 @@ const Navbar = () => {
                         <nav className="navbar container mx-auto flex justify-between items-start">
                             {currentPath !== "/" ? (
                                 <Link to="/" className="nav-logo">
-                                    <img src={/^\/portfolio\/\d+$/.test(currentPath) ? whiteLogo : navLogo} alt="" />
+                                    <img src={/^\/portfolio\/\d+$/.test(currentPath) ? whiteLogo : navLogo} alt=""/>
                                 </Link>
                             ) : (
                                 <div></div>
@@ -106,17 +118,29 @@ const Navbar = () => {
                                 className="hamburger-btn"
                                 onClick={() => dispatch(open())}
                             >
-                                <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28" height="28" />
+                                <Icon icon="iconamoon:menu-burger-horizontal" className="burger-path" width="28"
+                                      height="28"/>
                             </button>
                         )}
-                        <button
-                            className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
-                            onClick={() => dispatch(open())}
-                        >
-                            {currentPath === "/team" ? "хочу у вас работать" : "обсудить проект"}
-                        </button>
+                        {currentPath === "/team" ? (
+                            <button
+                                className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
+                                onClick={() => dispatch(openResumeModal())}
+                            >
+                                хочу у вас работать
+                            </button>
+                        ) : (
+                            <button
+                                className={(showButton || currentPath === "/contacts") && currentPath !== "/policy" ? "fixed-discuss-btn" : "hidden"}
+                                onClick={() => dispatch(openModal())}
+                            >
+                                обсудить проект
+                            </button>
+                        )}
                     </NavbarWrapper>
-                    <Menu />
+                    <Menu/>
+                    <DiscussModal/>
+                    <ResumeModal/>
                 </>
             )}
         </div>
