@@ -2,39 +2,19 @@
   background-color: #F0F0F0;
   height: 374px;
   position: relative;
-  z-index: -1;
+
   .founder-div {
     .founder {
       img {
         width: 263px;
-        height: 483px;
+        height: 470px;
         position: absolute;
         bottom: 0;
         left: 5%;
         object-fit: cover;
       }
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 10% !important;
-        h3 {
-          text-size-adjust: auto;
-          transform-origin: center center;
-          line-height: 32px;
-          color: #ffffff;
-          font-size: 27px;
-          font-weight: 600;
-        }
-        p {
-          text-size-adjust: auto;
-          transform-origin: center center;
-          line-height: 18px;
-          color: #ffffff;
-          font-size: 14px;
-          opacity: 0.6;
-        }
-      }
     }
+
     .second-founder {
       img {
         width: 263px;
@@ -44,34 +24,14 @@
         right: 5%;
         object-fit: cover;
       }
-      .second-founder-info {
-        position: absolute;
-        bottom: 140px;
-        right: 9%;
-        text-align: right;
-        h3 {
-          text-size-adjust: auto;
-          transform-origin: center center;
-          line-height: 32px;
-          color: #ffffff;
-          font-size: 27px;
-          font-weight: 600;
-        }
-        p {
-          text-size-adjust: auto;
-          transform-origin: center center;
-          line-height: 18px;
-          color: #ffffff;
-          font-size: 14px;
-          opacity: 0.6;
-        }
-      }
     }
   }
+
   .founder-text {
     width: 600px;
     margin: 60px 0;
     position: relative;
+
     h5 {
       transform-origin: center center;
       line-height: 31px;
@@ -80,10 +40,32 @@
       font-weight: 400;
       margin: 15px 0;
     }
+
     .right-icon {
       position: absolute;
-      right: 30px;
-      bottom: -45px;
+      right: 20px;
+      bottom: 25px;
+    }
+
+    .founders-title {
+      text-size-adjust: auto;
+      transform-origin: center center;
+      line-height: 18px;
+      color: #000000;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    .founders {
+      width: 100%;
+      .name {
+        text-size-adjust: auto;
+        transform-origin: center center;
+        line-height: 24px;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -91,103 +73,13 @@
 @media only screen and (max-width: 2174px) {
   .founder-div {
     justify-content: space-around;
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 600px !important;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 2000px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 520px !important;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1900px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 460px !important;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1810px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 420px !important;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1700px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 370px !important;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1600px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 310px !important;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 280px !important;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 250px !important;
-      }
-    }
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .founder-div {
     justify-content: space-between;
+
     .founder {
       img {
         width: 253px !important;
@@ -197,12 +89,8 @@
         left: 2% !important;
         object-fit: cover;
       }
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 100px !important;
-      }
     }
+
     .second-founder {
       img {
         width: 253px !important;
@@ -212,13 +100,8 @@
         right: 2% !important;
         object-fit: cover;
       }
-      .second-founder-info {
-        position: absolute;
-        bottom: 140px;
-        right: 5% !important;
-        text-align: right;
-      }
     }
+
     .founder-text {
       width: 550px;
     }
@@ -227,11 +110,12 @@
 
 @media only screen and (max-width: 1100px) {
   .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 90px !important;
+    .founder-text {
+      width: 500px;
+      margin: 30px 0;
+
+      .founders-title {
+        margin-top: 0;
       }
     }
   }
@@ -239,167 +123,135 @@
 
 @media only screen and (max-width: 1024px) {
   .founder-div {
-    .founder {
-      img {
-        width: 80%;
-        height: auto;
-        position: relative;
-        top: 0;
-      }
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 190px !important;
-      }
-    }
-
     .founder-text {
       width: 450px;
-      margin: 30px 0;
       text-align: center;
+
+
       h5 {
         font-size: 18px;
+        text-align: left;
       }
 
       .right-icon {
         right: 20px;
-        bottom: -40px;
+        bottom: 30px;
+      }
+
+      .founders-title {
+        margin-top: 50px;
       }
     }
   }
 }
 
 @media only screen and (max-width: 950px) {
-  .founder-div {
-    .founder {
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 80px !important;
+  .founder-over {
+    height: 580px;
+    .founder-div {
+      display: block;
+      .founder {
+        width: 100%;
+        img {
+          left: 45% !important;
+        }
       }
-    }
-
-    .founder-text {
-      width: 450px;
-      margin: 50px 0;
-      text-align: center;
-      h5 {
-        font-size: 18px;
-        text-align: left;
+      .second-founder {
+        img {
+          top: 110px;
+        }
       }
 
-      .right-icon {
-        right: 20px;
-        bottom: -40px;
+      .founder-text {
+        width: 450px;
+        margin: 50px 0;
+        text-align: center;
+        h5 {
+          font-size: 18px;
+          text-align: left;
+        }
+
+        .right-icon {
+          right: 20px;
+          bottom: 40px;
+        }
+        .founders-title {
+          margin: 10px 0;
+        }
+        .founders {
+          flex-direction: column;
+          align-items: start;
+          row-gap: 5px;
+        }
       }
     }
   }
 }
 
 
-@media only screen and (max-width: 750px) {
-  .founder-div {
-    .founder {
-      img {
-        width: 250px;
-        height: 414px;
-        left: -50px;
-      }
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 40px !important;
-        h3 {
-          font-size: 17px !important;
-          line-height: 22px !important;
+@media only screen and (max-width: 850px) {
+  .founder-over {
+    height: 640px;
+    .founder-div {
+      .founder {
+        img {
+          width: 250px;
+          height: 440px;
+          left: 40% !important;
         }
       }
-    }
-
-    .founder-text {
-      width: 360px;
-      margin: 0;
-      text-align: center;
-      h5 {
-        font-size: 24px;
-        text-align: left;
+      .second-founder {
+        img {
+          width: 250px;
+          height: 440px;
+          top: 200px;
+        }
       }
 
-      .right-icon {
-        right: 20px;
-        bottom: -40px;
+      .founder-text {
+        width: 80%;
+        margin: 0;
+        text-align: center;
+
+        h5 {
+          font-size: 24px;
+          text-align: left;
+        }
+
+        .right-icon {
+          right: 10px;
+          bottom: 100px;
+        }
       }
     }
   }
 }
 
 @media only screen and (max-width: 550px) {
-  .founder-div {
-    .founder {
-      img {
-        width: 177px;
-        height: 290px;
-        left: -50px;
-      }
-      .founder-info {
-        position: absolute;
-        bottom: 80px;
-        left: 40px !important;
-        h3 {
-          font-size: 17px !important;
-          line-height: 22px !important;
-        }
-      }
-    }
-
-    .founder-text {
-      width: 260px;
-      margin: 40px 0;
-      h5 {
-        font-size: 17px;
-        line-height: 22px;
-        text-align: left;
-      }
-
-      .right-icon {
-        right: 20px;
-        bottom: -40px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 500px) {
   .founder-over {
-    height: 580px !important;
+    height: 660px;
     .founder-div {
-      flex-direction: column-reverse !important;
       .founder {
-        width: 231px !important;
-        height: 381px !important;
-        position: absolute !important;
-        bottom: 0 !important;
-        left: 25%;
         img {
-          width: 100%;
-          height: 100%;
+          width: 250px;
+          height: 380px;
+          object-fit: fill;
           left: 0 !important;
-          top: 0;
         }
-        .founder-info {
-          position: absolute;
-          bottom: 40px;
-          left: 50px !important;
-          h3 {
-            font-size: 17px !important;
-            line-height: 22px !important;
-          }
+      }
+      .second-founder {
+        img {
+          width: 250px;
+          height: 380px;
+          object-fit: contain;
+          top: 280px;
         }
       }
 
       .founder-text {
-        width: 100%;
-        margin: 20px 0;
+        width: 90%;
+        margin: 40px 0;
+
         h5 {
           font-size: 17px;
           line-height: 22px;
@@ -407,28 +259,135 @@
         }
 
         .right-icon {
-          right: 20px;
-          bottom: -40px;
+          right: 0;
+          bottom: 40px;
+        }
+        .founders {
+          flex-direction: row;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .founder-over {
-    height: 640px !important;
     .founder-div {
-      flex-direction: column-reverse !important;
-
       .founder {
-        position: absolute !important;
-        bottom: 0 !important;
-        left: 25%;
+        width: 231px;
+        height: 381px;
+        position: absolute;
+        bottom: 0;
+        left: -20px;
 
         img {
-          left: 0 !important;
+          width: 100%;
+          height: 100%;
+          left: 0;
           top: 0;
+        }
+      }
+      .second-founder {
+        width: 211px;
+        height: 381px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      .founder-text {
+
+        h5 {
+          font-size: 17px;
+          line-height: 22px;
+          text-align: left;
+        }
+
+        .right-icon {
+          right: 0;
+          bottom: 75px;
+        }
+
+        .founders-title {
+          font-size: 11px;
+          line-height: 13px;
+        }
+        .founders {
+          .name {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .founder-over {
+    .founder-div {
+      .founder {
+        width: 180px;
+        height: 381px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+        }
+      }
+      .second-founder {
+        width: 180px;
+        height: 382px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          right: 0;
+          top: 0;
+          object-fit: cover;
+        }
+      }
+
+      .founder-text {
+        width: 100%;
+        margin: 20px 0;
+
+        h5 {
+          font-size: 17px;
+          line-height: 22px;
+          text-align: left;
+        }
+
+        .right-icon {
+          right: 0;
+          bottom: 75px;
+        }
+
+        .founders-title {
+          font-size: 11px;
+          line-height: 13px;
+        }
+        .founders {
+          .name {
+            font-size: 14px;
+            line-height: 18px;
+          }
         }
       }
     }
