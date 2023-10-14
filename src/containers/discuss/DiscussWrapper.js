@@ -1293,17 +1293,17 @@ export const Resume = styled.div`
   
   @media only screen and (max-width: 1024px) {
     display: ${(props) => (props.resume ? 'block' : 'none')};
-    top: 20%;
-    bottom: 50px;
-    left: 5%;
+    top: 20px;
+    bottom: 20px;
+    left: 10%;
     right: 30%;
-    height: ${(props) => (props.resume?.toString() === 'true' ? "max-content" : "0")};
-    width: 90%;
+    height: ${(props) => (props.resume?.toString() === 'true' ? "min-content" : "0")};
+    width: 80%;
     background-color: #ffffff;
     color: black;
     position: fixed;
     z-index: 998;
-    padding: 15px 0;
+    padding: 10px 0;
   }
   
   @media only screen and (max-width: 960px) {
@@ -1313,7 +1313,7 @@ export const Resume = styled.div`
     left: 15%;
     right: 30%;
     height: ${(props) => (props.resume?.toString() === 'true' ? "max-content" : "0")};
-    width: 600px;
+    width: 90%;
     background-color: #ffffff;
     color: black;
     position: fixed;
@@ -1365,10 +1365,9 @@ export const Resume = styled.div`
     display: ${(props) => (props.resume ? 'block' : 'none')};
     top: 15%;
     bottom: 50px;
-    left: 10%;
+    left: 5%;
     right: 30%;
     height: ${(props) => (props.resume?.toString() === 'true' ? "max-content" : "0")};
-    width: 600px;
     background-color: #ffffff;
     color: black;
     position: fixed;
@@ -1736,7 +1735,7 @@ export const Resume = styled.div`
     }  
   }
   
-  @media only screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     display: ${(props) => (props.resume ? 'block' : 'none')};
     top: 10%;
     bottom: 50px;
@@ -1783,10 +1782,6 @@ export const Resume = styled.div`
         color: white;
         font-weight: 200;
         opacity: .5;
-
-        &:hover {
-
-        }
       }
     }
 
@@ -1820,11 +1815,8 @@ export const Resume = styled.div`
             top: -15px;
             transition: 0.2s ease-out;
           }
-
-
         }
       }
-
 
       input[type=number]::-webkit-inner-spin-button,
       input[type=number]::-webkit-outer-spin-button {
@@ -1863,18 +1855,18 @@ export const Resume = styled.div`
   
   @media (min-height: 900px) and (max-width: 500px) {
     display: ${(props) => (props.resume ? 'block' : 'none')};
-    top: 15%;
+    top: 10%;
     bottom: 0;
     left: 0;
     right: 0;
-    height: ${(props) => (props.resume?.toString() === 'true' ? "max-content" : "0")};
+    height: ${(props) => (props.resume?.toString() === 'true' ? "min-content" : "0")};
     width: 100%;
     overflow-y: scroll;
     background-color: #ffffff;
     color: black;
     position: fixed;
     z-index: 998;
-    padding: 15px 0;
+    padding: 10px 0;
 
     .modal-container {
       width: auto;
