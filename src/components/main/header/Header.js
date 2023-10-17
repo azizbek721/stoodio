@@ -2,7 +2,7 @@ import React from 'react';
 import "./Header.scss"
 import Navbar from "../../../containers/navbar/Navbar";
 import mainVideo from "../../../assets/videos/main-video.mp4"
-import mainLogo from "../../../assets/images/main-logo.svg"
+import mainLogo from "../../../assets/images/main-logo.png"
 
 const Header = () => {
 
@@ -14,7 +14,7 @@ const Header = () => {
                 <img src={mainLogo} alt=""/>
                 <div className="header-texts flex flex-col gap-y-5">
                     <p>создаем</p>
-                    <h3>архитектуру, дизайн <br/> и ландшафт в современных стилях</h3>
+                    <h3>архитектуру и дизайн <br/> в современных стилях</h3>
                 </div>
             </header>
         </div>

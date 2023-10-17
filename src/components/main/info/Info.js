@@ -11,7 +11,7 @@ const Info = () => {
             {width < 900 ? (
                 <div className="info-hidden-texts flex flex-col">
                     <p>создаем</p>
-                    <h3>архитектуру, дизайн <br/> и ландшафт в современных стилях</h3>
+                    <h3>архитектуру и дизайн в современных стилях</h3>
                 </div>
             ) : <div></div>}
             <div className="info-div flex flex-col gap-y-5">
