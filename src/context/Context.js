@@ -1,20 +1,70 @@
 import {createContext} from 'react';
 import one from "../assets/images/project1.jpeg";
-import two from "../assets/images/project2.jpeg";
-import three from "../assets/images/project3.jpeg";
-import four from "../assets/images/project4.jpeg";
-import fife from "../assets/images/project5.jpeg";
-import six from "../assets/images/project6.jpeg";
-import seven from "../assets/images/project7.jpeg";
-import eight from "../assets/images/project8.jpeg";
-import nine from "../assets/images/project9.jpeg";
-import ten from "../assets/images/project10.jpeg";
 import plane from "../assets/images/plane.jpeg";
+import oneSlide from "../assets/images/main-bg.jpg";
+import twoSlide from "../assets/images/twoSlide.jpg";
+import threeSlide from "../assets/images/threeSldie.jpg";
+import fourSlide from "../assets/images/fourSlide.jpg";
+import fifeSlide from "../assets/images/fifeSlide.jpg"
+import sixSlide from "../assets/images/sixSlide.jpg";
+import sevenSlide from "../assets/images/sevenSlide.jpg";
+import eightSlide from "../assets/images/eightSlide.jpg";
+import nineSlide from "../assets/images/nineSlide.jpg";
+import tenSlide from  "../assets/images/tenSlide.jpg";
+import project1main from "../assets/images/project1main.jpg";
+import project1two from "../assets/images/project1two.jpg";
+import project1three from "../assets/images/project1three.jpg";
+import project1four from "../assets/images/project1four.jpg";
+import project1fife from "../assets/images/project1fife.jpg";
+import project1six from "../assets/images/project1six.jpg";
 
 
 const Context = createContext();
 
 const ContextProvider = ({children}) => {
+
+    const sliders = [
+        {
+            id: 1,
+            img: oneSlide
+        },
+        {
+            id: 2,
+            img: twoSlide
+        },
+        {
+            id: 3,
+            img: threeSlide
+        },
+        {
+            id: 4,
+            img: fourSlide
+        },
+        {
+            id: 5,
+            img: fifeSlide
+        },
+        {
+            id: 6,
+            img: sixSlide
+        },
+        {
+            id: 7,
+            img: sevenSlide
+        },
+        {
+            id: 8,
+            img: eightSlide
+        },
+        {
+            id: 9,
+            img: nineSlide
+        },
+        {
+            id: 10,
+            img: tenSlide
+        },
+    ]
 
     const projects = [
         {
@@ -22,301 +72,309 @@ const ContextProvider = ({children}) => {
             images: [
                 {
                     id: 1,
-                    img: one
+                    img: project1main
                 },
                 {
                     id: 2,
-                    img: one
+                    img: project1two
                 },
                 {
                     id: 3,
-                    img: one
+                    img: project1three
                 },
                 {
                     id: 4,
-                    img: one
+                    img: project1four
+                },
+                {
+                    id: 5,
+                    img: project1fife
+                },
+                {
+                    id: 6,
+                    img: project1six
                 }
             ],
             plane: plane,
-            name: 'Коттедж в Пскове',
-            workType: "Проектирование",
-            type: "Загородный дом",
-            date: "2022",
-            square: "213 м²",
-            place: "Россия, Псков",
-            status: "В стадии реализации",
-            team: "Сергей Станкевич, Александра Бородина, Анна Новикова, Дарья Куприк"
-        },
-        {
-            id: 2,
-            images: [
-                {
-                    id: 1,
-                    img: two
-                },
-                {
-                    id: 2,
-                    img: two
-                },
-                {
-                    id: 3,
-                    img: two
-                },
-                {
-                    id: 4,
-                    img: two
-                }
-            ],
-            plane: plane,
-            name: 'Квартира в Neva Towers',
-            workType: "Проектирование",
-            type: "Квартира",
-            date: "2022",
-            square: "120 м²",
-            place: "Россия, Москва",
-            status: "Реализован",
-            team: "Сергей Станкевич, Екатерина Распопина"
-        },
-        {
-            id: 3,
-            images: [
-                {
-                    id: 1,
-                    img: three
-                },
-                {
-                    id: 2,
-                    img: three
-                },
-                {
-                    id: 3,
-                    img: three
-                },
-                {
-                    id: 4,
-                    img: three
-                }
-            ],
-            plane: plane,
-            name: 'Коттедж в скандинавском стиле',
-            workType: "Проектирование",
-            type: "Коттедж в скандинавском стиле",
-            date: "2022",
-            square: "208",
-            place: "Россия, Псков",
-            status: "В стадии реализации",
-            team: "Сергей Станкевич, Сергей Григоренко"
-        },
-        {
-            id: 4,
-            images: [
-                {
-                    id: 1,
-                    img: four
-                },
-                {
-                    id: 2,
-                    img: four
-                },
-                {
-                    id: 3,
-                    img: four
-                },
-                {
-                    id: 4,
-                    img: four
-                }
-            ],
-            plane: plane,
-            name: 'Коттедж в КП Лисецкое, 122 м²',
-            workType: "Проектирование",
-            type: "Коттедж",
+            name: 'Интерьер дизайн в Алайский',
+            workType: "Интерьер дизайн",
+            type: "Интерьер дизайн",
             date: "2023",
-            square: "122 м²",
-            place: "Россия, Псков",
-            status: "В стадии реализации",
-            team: "Сергей Станкевич, Викторова Мария"
-        },
-        {
-            id: 5,
-            images: [
-                {
-                    id: 1,
-                    img: fife
-                },
-                {
-                    id: 2,
-                    img: fife
-                },
-                {
-                    id: 3,
-                    img: fife
-                },
-                {
-                    id: 4,
-                    img: fife
-                }
-            ],
-            plane: plane,
-            name: 'Коттеджи в Сочи',
-            workType: "Проектирование",
-            type: "Коттеджи в Сочи",
-            date: "2016",
-            square: "626, 47 м²",
-            place: "Россия, Сочи",
-            status: "В стадии реализации",
-            team: "Сергей Станкевич, Сергей Григоренко"
-        },
-        {
-            id: 6,
-            images: [
-                {
-                    id: 1,
-                    img: six
-                },
-                {
-                    id: 2,
-                    img: six
-                },
-                {
-                    id: 3,
-                    img: six
-                },
-                {
-                    id: 4,
-                    img: six
-                }
-            ],
-            plane: plane,
-            name: 'Коттедж в Пскове',
-            workType: "Проектирование",
-            type: "Загородный дом",
-            date: "2022",
             square: "213 м²",
-            place: "Россия, Псков",
-            status: "В стадии реализации",
-            team: "Сергей Станкевич, Александра Бородина, Анна Новикова, Дарья Куприк"
-        },
-        {
-            id: 7,
-            images: [
-                {
-                    id: 1,
-                    img: seven
-                },
-                {
-                    id: 2,
-                    img: seven
-                },
-                {
-                    id: 3,
-                    img: seven
-                },
-                {
-                    id: 4,
-                    img: seven
-                }
-            ],
-            plane: plane,
-            name: 'Офис креативного агентства Agency X',
-            workType: "Проектирование",
-            type: "Офисное пространство",
-            date: "2021",
-            square: "135 м²",
-            place: "Россия, Санкт-петербург",
+            place: "Ташкент, Алайский",
             status: "Реализован",
-            team: "Сергей Станкевич, Вероника Самойленко"
+            team: "Наврузов Зиёдулло, Наврузов Рахматулло"
         },
-        {
-            id: 8,
-            images: [
-                {
-                    id: 1,
-                    img: eight
-                },
-                {
-                    id: 2,
-                    img: eight
-                },
-                {
-                    id: 3,
-                    img: eight
-                },
-                {
-                    id: 4,
-                    img: eight
-                }
-            ],
-            plane: plane,
-            name: 'Коттедж в КП Уютный Берег',
-            workType: "Проектирование",
-            type: "Загородный дом",
-            date: "2022",
-            square: "284 м²",
-            place: "Россия, Псков",
-            status: "Реализован",
-            team: "Сергей Станкевич, Мария Викторова"
-        },
-        {
-            id: 9,
-            images: [
-                {
-                    id: 1,
-                    img: nine
-                },
-                {
-                    id: 2,
-                    img: nine
-                },
-                {
-                    id: 3,
-                    img: nine
-                },
-                {
-                    id: 4,
-                    img: nine
-                }
-            ],
-            plane: plane,
-            name: 'Современный коттедж во Всеволожске',
-            workType: "Проектирование",
-            type: "Коттеджи",
-            date: "2023",
-            square: "150 м²",
-            place: "Россия, Всеволожск",
-            status: "В стадии реализации",
-            team: "Сергей Станкевич, Яна Зырянова, Мария Викторова"
-        },
-        {
-            id: 10,
-            images: [
-                {
-                    id: 1,
-                    img: ten
-                },
-                {
-                    id: 2,
-                    img: ten
-                },
-                {
-                    id: 3,
-                    img: ten
-                },
-                {
-                    id: 4,
-                    img: ten
-                }
-            ],
-            plane: plane,
-            name: 'Реконструкция ОКН с приспособлением под апарт-отель',
-            workType: "",
-            type: "Загородный дом",
-            date: "2021",
-            square: "",
-            place: "Россия, Санкт-петербург",
-            status: "В стадии реализации",
-            team: "Сергей Станкевич, Сергей Григоренко"
-        },
+        // {
+        //     id: 2,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: two
+        //         },
+        //         {
+        //             id: 2,
+        //             img: two
+        //         },
+        //         {
+        //             id: 3,
+        //             img: two
+        //         },
+        //         {
+        //             id: 4,
+        //             img: two
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Квартира в Neva Towers',
+        //     workType: "Проектирование",
+        //     type: "Квартира",
+        //     date: "2022",
+        //     square: "120 м²",
+        //     place: "Россия, Москва",
+        //     status: "Реализован",
+        //     team: "Сергей Станкевич, Екатерина Распопина"
+        // },
+        // {
+        //     id: 3,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: three
+        //         },
+        //         {
+        //             id: 2,
+        //             img: three
+        //         },
+        //         {
+        //             id: 3,
+        //             img: three
+        //         },
+        //         {
+        //             id: 4,
+        //             img: three
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Коттедж в скандинавском стиле',
+        //     workType: "Проектирование",
+        //     type: "Коттедж в скандинавском стиле",
+        //     date: "2022",
+        //     square: "208",
+        //     place: "Россия, Псков",
+        //     status: "В стадии реализации",
+        //     team: "Сергей Станкевич, Сергей Григоренко"
+        // },
+        // {
+        //     id: 4,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: four
+        //         },
+        //         {
+        //             id: 2,
+        //             img: four
+        //         },
+        //         {
+        //             id: 3,
+        //             img: four
+        //         },
+        //         {
+        //             id: 4,
+        //             img: four
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Коттедж в КП Лисецкое, 122 м²',
+        //     workType: "Проектирование",
+        //     type: "Коттедж",
+        //     date: "2023",
+        //     square: "122 м²",
+        //     place: "Россия, Псков",
+        //     status: "В стадии реализации",
+        //     team: "Сергей Станкевич, Викторова Мария"
+        // },
+        // {
+        //     id: 5,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: fife
+        //         },
+        //         {
+        //             id: 2,
+        //             img: fife
+        //         },
+        //         {
+        //             id: 3,
+        //             img: fife
+        //         },
+        //         {
+        //             id: 4,
+        //             img: fife
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Коттеджи в Сочи',
+        //     workType: "Проектирование",
+        //     type: "Коттеджи в Сочи",
+        //     date: "2016",
+        //     square: "626, 47 м²",
+        //     place: "Россия, Сочи",
+        //     status: "В стадии реализации",
+        //     team: "Сергей Станкевич, Сергей Григоренко"
+        // },
+        // {
+        //     id: 6,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: six
+        //         },
+        //         {
+        //             id: 2,
+        //             img: six
+        //         },
+        //         {
+        //             id: 3,
+        //             img: six
+        //         },
+        //         {
+        //             id: 4,
+        //             img: six
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Коттедж в Пскове',
+        //     workType: "Проектирование",
+        //     type: "Загородный дом",
+        //     date: "2022",
+        //     square: "213 м²",
+        //     place: "Россия, Псков",
+        //     status: "В стадии реализации",
+        //     team: "Сергей Станкевич, Александра Бородина, Анна Новикова, Дарья Куприк"
+        // },
+        // {
+        //     id: 7,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: seven
+        //         },
+        //         {
+        //             id: 2,
+        //             img: seven
+        //         },
+        //         {
+        //             id: 3,
+        //             img: seven
+        //         },
+        //         {
+        //             id: 4,
+        //             img: seven
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Офис креативного агентства Agency X',
+        //     workType: "Проектирование",
+        //     type: "Офисное пространство",
+        //     date: "2021",
+        //     square: "135 м²",
+        //     place: "Россия, Санкт-петербург",
+        //     status: "Реализован",
+        //     team: "Сергей Станкевич, Вероника Самойленко"
+        // },
+        // {
+        //     id: 8,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: eight
+        //         },
+        //         {
+        //             id: 2,
+        //             img: eight
+        //         },
+        //         {
+        //             id: 3,
+        //             img: eight
+        //         },
+        //         {
+        //             id: 4,
+        //             img: eight
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Коттедж в КП Уютный Берег',
+        //     workType: "Проектирование",
+        //     type: "Загородный дом",
+        //     date: "2022",
+        //     square: "284 м²",
+        //     place: "Россия, Псков",
+        //     status: "Реализован",
+        //     team: "Сергей Станкевич, Мария Викторова"
+        // },
+        // {
+        //     id: 9,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: nine
+        //         },
+        //         {
+        //             id: 2,
+        //             img: nine
+        //         },
+        //         {
+        //             id: 3,
+        //             img: nine
+        //         },
+        //         {
+        //             id: 4,
+        //             img: nine
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Современный коттедж во Всеволожске',
+        //     workType: "Проектирование",
+        //     type: "Коттеджи",
+        //     date: "2023",
+        //     square: "150 м²",
+        //     place: "Россия, Всеволожск",
+        //     status: "В стадии реализации",
+        //     team: "Сергей Станкевич, Яна Зырянова, Мария Викторова"
+        // },
+        // {
+        //     id: 10,
+        //     images: [
+        //         {
+        //             id: 1,
+        //             img: ten
+        //         },
+        //         {
+        //             id: 2,
+        //             img: ten
+        //         },
+        //         {
+        //             id: 3,
+        //             img: ten
+        //         },
+        //         {
+        //             id: 4,
+        //             img: ten
+        //         }
+        //     ],
+        //     plane: plane,
+        //     name: 'Реконструкция ОКН с приспособлением под апарт-отель',
+        //     workType: "",
+        //     type: "Загородный дом",
+        //     date: "2021",
+        //     square: "",
+        //     place: "Россия, Санкт-петербург",
+        //     status: "В стадии реализации",
+        //     team: "Сергей Станкевич, Сергей Григоренко"
+        // },
     ];
 
     const steps = [
@@ -494,7 +552,7 @@ const ContextProvider = ({children}) => {
 
     return (
         <Context.Provider
-            value={{projects, steps, services, vacancies}}
+            value={{sliders, projects, steps, services, vacancies}}
         >
             {children}
         </Context.Provider>
