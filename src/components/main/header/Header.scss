@@ -55,6 +55,14 @@ header {
 }
 
 @media only screen and (max-width: 900px) {
+  .video-container {
+    height: 500px;
+    .swiper {
+      .background-video {
+        object-fit: fill;
+      }
+    }
+  }
   header {
     margin-bottom: 15px;
     img {
@@ -68,6 +76,13 @@ header {
 }
 
 @media only screen and (max-width: 500px) {
+  .video-container {
+    .swiper {
+      .background-video {
+        object-fit: fill;
+      }
+    }
+  }
   header {
     margin-bottom: 15px;
     img {

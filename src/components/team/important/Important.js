@@ -6,10 +6,10 @@ import teamVideo from "../../../assets/videos/stoodio-team.mp4"
 const Important = () => {
     return (
         <div className="container mx-auto">
-            <div className="important-media flex gap-x-12 items-start">
-                <video src={teamVideo} autoPlay muted loop playsInline/>
-                <img src={teamImg} alt=""/>
-            </div>
+            {/*<div className="important-media flex gap-x-12 items-start">*/}
+            {/*    <video src={teamVideo} autoPlay muted loop playsInline/>*/}
+            {/*    <img src={teamImg} alt=""/>*/}
+            {/*</div>*/}
             <div className="important flex justify-between items-start">
                 <div className="important-title-div flex items-end gap-x-6">
                     <h3 className="important-title">что еще тебе важно знать о нас</h3>
