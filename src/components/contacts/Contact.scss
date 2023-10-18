@@ -118,42 +118,6 @@
     flex-direction: column-reverse;
     .contact-left {
       float: right;
-      margin: 50px 0;
-      .contact-left-top {
-        .round {
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          background-color: #0047bb;
-        }
-
-        h3 {
-          transform-origin: center center;
-          line-height: 29px;
-          color: #000000;
-          font-size: 24px;
-          font-weight: 400;
-        }
-      }
-
-      .contact-left-address {
-        margin: 30px 0;
-
-        h3 {
-          font-weight: 700;
-          line-height: 24px;
-          color: #000000;
-          font-size: 17px;
-        }
-
-        p {
-          line-height: 24px;
-          color: #000000;
-          font-size: 17px;
-          font-weight: 400;
-          word-break: normal;
-        }
-      }
 
       .contact-request {
         line-height: 20px;
@@ -207,41 +171,6 @@
     .contact-left {
       float: right;
       margin: 50px 0 0 0;
-      .contact-left-top {
-        .round {
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          background-color: #0047bb;
-        }
-
-        h3 {
-          transform-origin: center center;
-          line-height: 29px;
-          color: #000000;
-          font-size: 24px;
-          font-weight: 400;
-        }
-      }
-
-      .contact-left-address {
-        margin: 30px 0;
-
-        h3 {
-          font-weight: 700;
-          line-height: 24px;
-          color: #000000;
-          font-size: 17px;
-        }
-
-        p {
-          line-height: 24px;
-          color: #000000;
-          font-size: 17px;
-          font-weight: 400;
-          word-break: normal;
-        }
-      }
 
       .contact-request {
         line-height: 20px;
@@ -286,6 +215,13 @@
         grid-row-gap: 25px;
         .mail, .instagram {
           width: auto;
+        }
+        .contact-links {
+          flex-direction: column;
+          grid-row-gap: 20px;
+          a {
+            width: 100%;
+          }
         }
       }
     }
