@@ -4,6 +4,7 @@ import footerLogo from "../../assets/images/logo.png"
 import qrCode from "../../assets/images/qr-code.svg"
 import {Link} from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
+import {Icon} from '@iconify/react';
 
 const Footer = () => {
 
@@ -21,15 +22,21 @@ const Footer = () => {
                             </Link>
                             <div className="footer-contact flex gap-x-5 m-y-4">
                                 <img src={qrCode} alt=""/>
-                                <div className="footer-contacts flex flex-col gap-y-5">
+                                <div className="footer-contacts flex flex-col justify-between">
                                     <div className="phone-number">
                                         <p>каждый день с 9 до 20</p>
                                         <a href="tel:+998930000580">+99893 0000580</a>
                                     </div>
-                                    <div className="instagram-account">
-                                        <p>instagram*</p>
-                                        <a href="https://www.instagram.com/stoodio.uz/?hl=ru"
-                                           target="blank">@stoodio.uz</a>
+                                    <div className="footer-contact-icons flex gap-x-5">
+                                        <a href="https://www.instagram.com/stoodio.uz/?hl=ru" target="blank">
+                                            <Icon icon="bi:instagram" width="28" height="28" />
+                                        </a>
+                                        <a href="https://t.me/STOODIO_UZ" target="blank">
+                                            <Icon icon="fontisto:telegram" width="28" height="28" />
+                                        </a>
+                                        <a href="https://www.facebook.com/profile.php?id=100065553550351" target="blank">
+                                            <Icon icon="bi:facebook" width="28" height="28" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -60,10 +67,16 @@ const Footer = () => {
                                         <p>каждый день с 9 до 20</p>
                                         <a href="tel:+998930000580">+99893 0000580</a>
                                     </div>
-                                    <div className="instagram-account">
-                                        <p>instagram*</p>
-                                        <a href="https://www.instagram.com/stoodio.uz/?hl=ru"
-                                           target="blank">@stoodio.uz</a>
+                                    <div className="footer-contact-icons flex gap-x-5">
+                                        <a href="https://www.instagram.com/stoodio.uz/?hl=ru" target="blank">
+                                            <Icon icon="bi:instagram" width="28" height="28" />
+                                        </a>
+                                        <a href="https://t.me/STOODIO_UZ" target="blank">
+                                            <Icon icon="fontisto:telegram" width="28" height="28" />
+                                        </a>
+                                        <a href="https://www.facebook.com/profile.php?id=100065553550351" target="blank">
+                                            <Icon icon="bi:facebook" width="28" height="28" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -93,10 +106,16 @@ const Footer = () => {
                                         <p>каждый день с 9 до 20</p>
                                         <a href="tel:+998930000580">+99893 0000580</a>
                                     </div>
-                                    <div className="instagram-account">
-                                        <p>instagram*</p>
-                                        <a href="https://www.instagram.com/stoodio.uz/?hl=ru"
-                                           target="blank">@stoodio.uz</a>
+                                    <div className="footer-contact-icons flex gap-x-5">
+                                        <a href="https://www.instagram.com/stoodio.uz/?hl=ru" target="blank">
+                                            <Icon icon="bi:instagram" width="28" height="28" />
+                                        </a>
+                                        <a href="https://t.me/STOODIO_UZ" target="blank">
+                                            <Icon icon="fontisto:telegram" width="28" height="28" />
+                                        </a>
+                                        <a href="https://www.facebook.com/profile.php?id=100065553550351" target="blank">
+                                            <Icon icon="bi:facebook" width="28" height="28" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 .video-container {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  height: 750px;
   //padding-bottom: 49px;
   .swiper {
     position: absolute;
@@ -9,27 +9,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    //object-fit: cover;
     z-index: -1;
 
     .background-video {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      //object-fit: cover;
     }
   }
 }
 
 header {
-  margin-bottom: 35px;
+  margin: 35px 0;
   img {
     width: 180px;
     height: 540px;
   }
   .header-texts {
+    height: 100%;
     width: 600px;
     color: white;
-    margin-bottom: 50px;
     p {
       transform-origin: center center;
       font-size: 16px;

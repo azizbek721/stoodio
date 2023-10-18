@@ -17,6 +17,7 @@ import project1three from "../assets/images/project1three.jpg";
 import project1four from "../assets/images/project1four.jpg";
 import project1fife from "../assets/images/project1fife.jpg";
 import project1six from "../assets/images/project1six.jpg";
+import project1plane from "../assets/images/project1plane.png";
 
 
 const Context = createContext();
@@ -95,8 +96,8 @@ const ContextProvider = ({children}) => {
                     img: project1six
                 }
             ],
-            plane: plane,
-            name: 'Интерьер дизайн в Алайский',
+            plane: project1plane,
+            name: 'Интерьер дизайн',
             workType: "Интерьер дизайн",
             type: "Интерьер дизайн",
             date: "2023",
