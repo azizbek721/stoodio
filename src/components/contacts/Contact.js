@@ -25,7 +25,7 @@ const Contact = () => {
                     <h1 className="contact-title">контакты</h1>
                     <h3>С любовью к своему делу, мы готовы работать над вашим проектом в любых городах и странах.</h3>
                     <div className="single-number flex items-center gap-x-8">
-                        <a href="tel:+998951952828">+99893 0000580</a>
+                        <a href="tel:+998930000580">+99893 0000580</a>
                         <p>единый номер для звонков</p>
                     </div>
                     <div className="mail-instagram">

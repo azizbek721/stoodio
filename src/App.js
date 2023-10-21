@@ -6,9 +6,15 @@ import Team from "./pages/team/Team";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Policy from "./pages/policy/Policy";
 import PortfolioById from "./pages/portfolio/PortfolioById";
+import {useEffect} from "react";
 
 function App() {
     const currentPath = useLocation().pathname;
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [currentPath]);
+
 
     return (
         <div className="App">

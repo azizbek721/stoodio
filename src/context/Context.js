@@ -61,10 +61,10 @@ const ContextProvider = ({children}) => {
             id: 9,
             img: nineSlide
         },
-        {
-            id: 10,
-            img: tenSlide
-        },
+        // {
+        //     id: 10,
+        //     img: tenSlide
+        // },
     ]
 
     const projects = [
