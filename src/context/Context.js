@@ -1,6 +1,6 @@
 import {createContext} from 'react';
-import one from "../assets/images/project1.jpeg";
-import plane from "../assets/images/plane.jpeg";
+// import one from "../assets/images/project1.jpeg";
+// import plane from "../assets/images/plane.jpeg";
 import oneSlide from "../assets/images/main-bg.jpg";
 import twoSlide from "../assets/images/twoSlide.jpg";
 import threeSlide from "../assets/images/threeSldie.jpg";
@@ -10,7 +10,7 @@ import sixSlide from "../assets/images/sixSlide.jpg";
 import sevenSlide from "../assets/images/sevenSlide.jpg";
 import eightSlide from "../assets/images/eightSlide.jpg";
 import nineSlide from "../assets/images/nineSlide.jpg";
-import tenSlide from  "../assets/images/tenSlide.jpg";
+// import tenSlide from  "../assets/images/tenSlide.jpg";
 import project1main from "../assets/images/project1main.jpg";
 import project1two from "../assets/images/project1two.jpg";
 import project1three from "../assets/images/project1three.jpg";
@@ -18,6 +18,8 @@ import project1four from "../assets/images/project1four.jpg";
 import project1fife from "../assets/images/project1fife.jpg";
 import project1six from "../assets/images/project1six.jpg";
 import project1plane from "../assets/images/project1plane.png";
+import project2interior from "../assets/images/project2interer.jpg"
+import project3interior from "../assets/images/project3interer.jpg"
 
 
 const Context = createContext();
@@ -101,71 +103,71 @@ const ContextProvider = ({children}) => {
             workType: "Интерьер дизайн",
             type: "Интерьер дизайн",
             date: "2023",
-            square: "213 м²",
+            square: "253 м²",
             place: "Ташкент, Алайский",
             status: "Реализован",
             team: "Наврузов Зиёдулло, Наврузов Рахматулло"
         },
-        // {
-        //     id: 2,
-        //     images: [
-        //         {
-        //             id: 1,
-        //             img: two
-        //         },
-        //         {
-        //             id: 2,
-        //             img: two
-        //         },
-        //         {
-        //             id: 3,
-        //             img: two
-        //         },
-        //         {
-        //             id: 4,
-        //             img: two
-        //         }
-        //     ],
-        //     plane: plane,
-        //     name: 'Квартира в Neva Towers',
-        //     workType: "Проектирование",
-        //     type: "Квартира",
-        //     date: "2022",
-        //     square: "120 м²",
-        //     place: "Россия, Москва",
-        //     status: "Реализован",
-        //     team: "Сергей Станкевич, Екатерина Распопина"
-        // },
-        // {
-        //     id: 3,
-        //     images: [
-        //         {
-        //             id: 1,
-        //             img: three
-        //         },
-        //         {
-        //             id: 2,
-        //             img: three
-        //         },
-        //         {
-        //             id: 3,
-        //             img: three
-        //         },
-        //         {
-        //             id: 4,
-        //             img: three
-        //         }
-        //     ],
-        //     plane: plane,
-        //     name: 'Коттедж в скандинавском стиле',
-        //     workType: "Проектирование",
-        //     type: "Коттедж в скандинавском стиле",
-        //     date: "2022",
-        //     square: "208",
-        //     place: "Россия, Псков",
-        //     status: "В стадии реализации",
-        //     team: "Сергей Станкевич, Сергей Григоренко"
-        // },
+        {
+            id: 2,
+            images: [
+                {
+                    id: 1,
+                    img: project2interior
+                },
+                {
+                    id: 2,
+                    img: project2interior
+                },
+                {
+                    id: 3,
+                    img: project2interior
+                },
+                {
+                    id: 4,
+                    img: project2interior
+                }
+            ],
+            plane: project1plane,
+            name: 'Интерьер дизайн',
+            workType: "Интерьер дизайн",
+            type: "Интерьер дизайн",
+            date: "2023",
+            square: "253 м²",
+            place: "Ташкент, Алайский",
+            status: "Реализован",
+            team: "Наврузов Зиёдулло, Наврузов Рахматулло"
+        },
+        {
+            id: 3,
+            images: [
+                {
+                    id: 1,
+                    img: project3interior
+                },
+                {
+                    id: 2,
+                    img: project3interior
+                },
+                {
+                    id: 3,
+                    img: project3interior
+                },
+                {
+                    id: 4,
+                    img: project3interior
+                }
+            ],
+            plane: project1plane,
+            name: 'Интерьер дизайн',
+            workType: "Интерьер дизайн",
+            type: "Интерьер дизайн",
+            date: "2023",
+            square: "253 м²",
+            place: "Ташкент, Алайский",
+            status: "Реализован",
+            team: "Наврузов Зиёдулло, Наврузов Рахматулло"
+        },
         // {
         //     id: 4,
         //     images: [

@@ -91,6 +91,18 @@ export const NavbarWrapper = styled.div`
     }
   }
 
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
   .float-button {
     display: block;
     width: 60px !important;
@@ -103,6 +115,7 @@ export const NavbarWrapper = styled.div`
     z-index: 1;
     padding: 6px;
     box-shadow: -11px -7px 16px -4px rgba(34, 60, 80, 0.2);
+    animation: pulse 2s infinite;
   }
 
   .opened-float-button {
