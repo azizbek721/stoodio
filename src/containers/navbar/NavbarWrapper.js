@@ -73,6 +73,97 @@ export const NavbarWrapper = styled.div`
     display: none;
   }
 
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  .float-button {
+    display: block;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    background: #2447BB;
+    position: fixed;
+    bottom: 50px !important;
+    right: 50px !important;
+    z-index: 1;
+    padding: 6px;
+    box-shadow: -11px -7px 16px -4px rgba(34, 60, 80, 0.2);
+  }
+
+  .opened-float-button {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    color: black;
+    position: fixed;
+    bottom: 50px !important;
+    right: 50px !important;
+    z-index: 1;
+    padding: 20px !important;
+    text-align: center;
+    box-shadow: -11px -7px 16px -4px rgba(34, 60, 80, 0.2);
+  }
+
+  .floating-menu {
+    animation: slideIn 0.3s ease-out forwards; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px !important;
+    border-radius: 5px;
+    z-index: 1;
+    position: fixed;
+    right: 50px !important;
+    bottom: 120px !important;
+
+    .floating-menu.slide-out {
+      animation: slideOut 0.3s ease-out forwards; 
+      z-index: -1;
+    }
+
+    a {
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 8px;
+      box-shadow: -11px -7px 16px -4px rgba(34, 60, 80, 0.2);
+
+      .iconify {
+        width: 50px !important;
+        height: 50px !important;
+      }
+    }
+
+    .phone {
+      background: #124E73;
+      padding: 9px;
+
+      .iconify {
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+  }
+
   @media only screen and (max-width: 900px) {
     padding-top: 20px;
     .navbar {
@@ -85,21 +176,77 @@ export const NavbarWrapper = styled.div`
     }
 
     .hamburger-btn {
-      top: 30px;
-      right: 30px;
+      top: 20px;
+      right: 20px;
       width: 48px;
       height: 48px;
       padding: 10px;
     }
 
     .fixed-discuss-btn {
-      bottom: 30px;
-      left: 30px;
+      bottom: 20px;
+      left: 20px;
       width: 200px;
       height: 48px;
       font-size: 16px;
       line-height: 1.5;
       padding: 0 20px;
+    }
+
+    .float-button {
+      width: 48px !important;
+      height: 48px !important;
+      bottom: 20px !important;
+      right: 20px !important;
+      padding: 6px !important;
+    }
+
+    .opened-float-button {
+      width: 48px !important;
+      height: 48px !important;
+      bottom: 20px !important;
+      right: 20px !important;
+      padding: 20px !important;
+    }
+
+    .floating-menu {
+      animation: slideIn 0.3s ease-out forwards;
+      padding: 0 !important;
+      border-radius: 5px;
+      right: 20px !important;
+      bottom: 80px !important;
+      row-gap: 5px !important;
+      outline: none;
+
+      .floating-menu.slide-out {
+        animation: slideOut 0.3s ease-out forwards;
+        z-index: 999;
+      }
+
+      a {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 8px;
+        box-shadow: -11px -7px 16px -4px rgba(34, 60, 80, 0.2);
+
+        .iconify {
+          width: 48px !important;
+          height: 48px !important;
+        }
+      }
+
+      .phone {
+        background: #124E73;
+        padding: 9px;
+
+        .iconify {
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
   }
 
@@ -122,6 +269,62 @@ export const NavbarWrapper = styled.div`
       font-size: 16px;
       line-height: 1.5;
       padding: 0 15px;
+    }
+  }
+
+  .float-button {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
+    padding: 6px;
+  }
+
+  .opened-float-button {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px;
+  }
+
+  .floating-menu {
+    animation: slideIn 0.3s ease-out forwards;
+    padding: 0;
+    border-radius: 5px;
+    right: 20px;
+    bottom: 80px;
+    row-gap: 5px;
+    outline: none;
+
+    .floating-menu.slide-out {
+      animation: slideOut 0.3s ease-out forwards; 
+      z-index: -1;
+    }
+
+    a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 8px;
+      box-shadow: -11px -7px 16px -4px rgba(34, 60, 80, 0.2);
+      
+      .iconify {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .phone {
+      background: #124E73;
+      padding: 9px;
+      
+      .iconify {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 `
