@@ -11,7 +11,8 @@
     height: 100%;
     //object-fit: cover;
     z-index: -1;
-    background-color: black;
+    background: rgb(154,143,132);
+    background: linear-gradient(90deg, rgba(154,143,132,1) 0%, rgba(206,202,198,1) 35%, rgba(197,193,193,1) 100%);
 
     .background-video {
       //min-width: 50%;
