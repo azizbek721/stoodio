@@ -9,15 +9,15 @@ const DiscussModal = () => {
     const {discuss} = useSelector((state) => state.DiscussReducer);
     const dispatch = useDispatch();
 
-    const closing = () => {
+    const closing = useCallback(() => {
         dispatch(closeModal());
-    };
+    }, [dispatch]);
 
     const handleKeyDown = useCallback((e) => {
         if (e.key === 'Escape') {
             closing();
         }
-    }, [closing]);
+    }, [discuss, closing]);
 
     useEffect(() => {
         if (discuss) {

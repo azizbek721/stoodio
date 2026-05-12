@@ -9,15 +9,15 @@ const ResumeModal = () => {
     const dispatch = useDispatch();
     const [isSending, setIsSending] = useState(false);
 
-    const closing = () => {
+    const closing = useCallback(() => {
         dispatch(closeResumeModal());
-    };
+    }, [dispatch]);
 
     const handleKeyDown = useCallback((e) => {
         if (e.key === 'Escape') {
             closing();
         }
-    }, [closing]);
+    }, [resume, closing]);
 
     useEffect(() => {
         if (resume) {
