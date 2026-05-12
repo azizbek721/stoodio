@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
 import "./Steps.scss"
 import useWindowSize from "../../../hooks/useWindowSize";
 import arrowRight from "../../../assets/images/arrow-right.svg";
@@ -14,7 +15,7 @@ const Steps = () => {
     useEffect(() => {
         const fetchSteps = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/steps');
+                const response = await axios.get(`${API_URL}/api/steps`);
                 setSteps(response.data);
             } catch (error) {
                 console.error("Error fetching steps:", error);

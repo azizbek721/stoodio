@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
 import "./Services.scss"
 import arrowRight from "../../../assets/images/arrow-right.svg";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -17,7 +18,7 @@ const Services = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/services');
+                const response = await axios.get(`${API_URL}/api/services`);
                 setServices(response.data);
             } catch (error) {
                 console.error("Error fetching services:", error);

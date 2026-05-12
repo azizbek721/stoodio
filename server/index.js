@@ -38,7 +38,8 @@ app.post('/api/upload', (req, res) => {
 
     fs.writeFileSync(filePath, buffer);
 
-    const imageUrl = `http://localhost:8080/uploads/${fileName}`;
+    const protocol = req.headers['x-forwarded-proto'] || 'http';
+    const imageUrl = `${protocol}://${req.headers.host}/uploads/${fileName}`;
     res.json({ url: imageUrl });
   } catch (error) {
     console.error('Upload error:', error);

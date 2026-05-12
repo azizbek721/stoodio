@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../config';
 
 // Import fallback local assets
 import oneSlide from "../assets/images/main-bg.jpg";
@@ -14,7 +15,7 @@ import nineSlide from "../assets/images/nineSlide.jpg";
 
 const Context = createContext();
 
-const ContextProvider = ({children}) => {
+const ContextProvider = ({ children }) => {
     const [projects, setProjects] = useState([]);
     const [sliders, setSliders] = useState([]);
     const [services, setServices] = useState([]);
@@ -23,17 +24,25 @@ const ContextProvider = ({children}) => {
 
     const resolveImagePath = (path) => {
         if (!path) return 'https://via.placeholder.com/800x600?text=No+Image';
-        
-        // If it's already a full URL (e.g. from our upload system)
-        if (path.startsWith('http')) return path;
-        
+
+        // If the path contains "/uploads/", extract just the filename and use the current API_URL
+        // This fixes cases where the DB has a hardcoded domain (like localhost or an old Render URL)
+        if (typeof path === 'string' && path.includes('/uploads/')) {
+            const fileName = path.split('/uploads/').pop();
+            return `${API_URL}/uploads/${fileName}`;
+        }
+
+        // If it's already a full URL (not an upload)
+        if (typeof path === 'string' && path.startsWith('http')) return path;
+
         // Try to resolve from local assets folder
         try {
             return require(`../assets/images/${path}`);
         } catch (e) {
-            // Fallback for relative paths that might be served by the backend
+            // Fallback for relative paths served by the backend
             if (path.includes('/') || path.includes('.')) {
-                return `http://localhost:8080/uploads/${path}`;
+                const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+                return `${API_URL}/uploads/${cleanPath}`;
             }
             return 'https://via.placeholder.com/800x600?text=Image+Not+Found';
         }
@@ -43,9 +52,9 @@ const ContextProvider = ({children}) => {
         const fetchAllData = async () => {
             try {
                 setLoading(true);
-                
+
                 // Fetch Projects
-                const projectsRes = await axios.get('http://localhost:8080/api/projects');
+                const projectsRes = await axios.get(`${API_URL}/api/projects`);
                 const resolvedProjects = projectsRes.data.map(p => ({
                     ...p,
                     name: p.name || p.title,
@@ -58,7 +67,7 @@ const ContextProvider = ({children}) => {
                 setProjects(resolvedProjects);
 
                 // Fetch Sliders
-                const slidersRes = await axios.get('http://localhost:8080/api/sliders');
+                const slidersRes = await axios.get(`${API_URL}/api/sliders`);
                 if (slidersRes.data && slidersRes.data.length > 0) {
                     setSliders(slidersRes.data.map(s => ({ ...s, img: resolveImagePath(s.img) })));
                 } else {
@@ -71,11 +80,11 @@ const ContextProvider = ({children}) => {
                 }
 
                 // Fetch Services
-                const servicesRes = await axios.get('http://localhost:8080/api/services');
+                const servicesRes = await axios.get(`${API_URL}/api/services`);
                 setServices(servicesRes.data);
 
                 // Fetch Vacancies
-                const vacanciesRes = await axios.get('http://localhost:8080/api/vacancies');
+                const vacanciesRes = await axios.get(`${API_URL}/api/vacancies`);
                 setVacancies(vacanciesRes.data);
 
             } catch (error) {

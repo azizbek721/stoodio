@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import API_URL from '../../config';
 import ItemModal from './ItemModal';
 
 const CATEGORIES = [
@@ -30,7 +31,7 @@ const AdminPanel = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const getApiUrl = useCallback(() => `http://localhost:8080/api/${currentCategory}`, [currentCategory]);
+  const getApiUrl = useCallback(() => `${API_URL}/api/${currentCategory}`, [currentCategory]);
 
   // Fetch Items
   const fetchItems = useCallback(async () => {

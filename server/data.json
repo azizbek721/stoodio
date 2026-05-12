@@ -30,43 +30,43 @@
     {
       "name": "",
       "description": "",
-      "img": "http://localhost:8080/uploads/1778579574045-540788095.jpg",
+      "img": "https://stoodio-backend.onrender.com/uploads/1778579574045-540788095.jpg",
       "id": "1778579577006"
     },
     {
       "name": "",
       "description": "",
-      "img": "http://localhost:8080/uploads/1778579597992-930742765.jpg",
+      "img": "https://stoodio-backend.onrender.com/uploads/1778579597992-930742765.jpg",
       "id": "1778579599150"
     },
     {
       "name": "",
       "description": "",
-      "img": "http://localhost:8080/uploads/1778579606390-941963987.jpg",
+      "img": "https://stoodio-backend.onrender.com/uploads/1778579606390-941963987.jpg",
       "id": "1778579609749"
     },
     {
       "name": "",
       "description": "",
-      "img": "http://localhost:8080/uploads/1778579620796-203964325.jpg",
+      "img": "https://stoodio-backend.onrender.com/uploads/1778579620796-203964325.jpg",
       "id": "1778579622017"
     },
     {
       "name": "",
       "description": "",
-      "img": "http://localhost:8080/uploads/1778579628132-271875353.jpg",
+      "img": "https://stoodio-backend.onrender.com/uploads/1778579628132-271875353.jpg",
       "id": "1778579629169"
     },
     {
       "name": "",
       "description": "",
-      "img": "http://localhost:8080/uploads/1778579636185-954594914.jpg",
+      "img": "https://stoodio-backend.onrender.com/uploads/1778579636185-954594914.jpg",
       "id": "1778579638666"
     },
     {
       "name": "",
       "description": "",
-      "img": "http://localhost:8080/uploads/1778579660411-11817535.jpg",
+      "img": "https://stoodio-backend.onrender.com/uploads/1778579660411-11817535.jpg",
       "id": "1778579662253"
     }
   ],
@@ -76,14 +76,14 @@
       "images": [
         {
           "id": 1,
-          "img": "http://localhost:8080/uploads/1778578170803-483796196.jpg"
+          "img": "https://stoodio-backend.onrender.com/uploads/1778578170803-483796196.jpg"
         },
         {
           "id": 3,
-          "img": "http://localhost:8080/uploads/1778578192371-704087164.jpg"
+          "img": "https://stoodio-backend.onrender.com/uploads/1778578192371-704087164.jpg"
         }
       ],
-      "plane": "http://localhost:8080/uploads/1778578239319-484007919.jpg",
+      "plane": "https://stoodio-backend.onrender.com/uploads/1778578239319-484007919.jpg",
       "name": "Интерьер дизайн",
       "workType": "Интерьер дизайн",
       "type": "Интерьер дизайн",

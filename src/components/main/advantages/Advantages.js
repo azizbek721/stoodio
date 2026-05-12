@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
 import "./Advantages.scss"
 import arrowRight from "../../../assets/images/arrow-right.svg"
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -14,7 +15,7 @@ const Advantages = () => {
     useEffect(() => {
         const fetchAdvantages = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/advantages');
+                const response = await axios.get(`${API_URL}/api/advantages`);
                 setAdvantages(response.data);
             } catch (error) {
                 console.error("Error fetching advantages:", error);

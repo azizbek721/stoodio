@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../config';
 
 const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
   const [formData, setFormData] = useState({});
@@ -45,7 +46,7 @@ const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
     reader.onload = async () => {
       try {
         setIsUploading(true);
-        const response = await axios.post('http://localhost:8080/api/upload', {
+        const response = await axios.post(`${API_URL}/api/upload`, {
           image: reader.result,
           name: file.name
         });
