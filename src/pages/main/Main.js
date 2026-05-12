@@ -7,7 +7,7 @@ import Founder from "../../components/main/founder/Founder";
 import Advantages from "../../components/main/advantages/Advantages";
 import Discuss from "../../containers/discuss/Discuss";
 import Steps from "../../components/main/steps/Steps";
-import ProjectManager from "../../components/main/projectManager/ProjectManager";
+// import ProjectManager from "../../components/main/projectManager/ProjectManager";
 import SaveMoney from "../../components/main/saveMoney/SaveMoney";
 import Services from "../../components/main/services/Services";
 import Projects from "../../components/main/projects/Projects";
@@ -16,7 +16,7 @@ import Useful from "../../components/main/useful/Useful";
 const Main = () => {
     return (
         <div>
-            <Header/>
+            <Header />
             <Info />
             <Counter />
             <Founder />
@@ -28,7 +28,7 @@ const Main = () => {
             {/*<ProjectManager />*/}
             <Steps />
             <Discuss />
-            <Footer/>
+            <Footer />
         </div>
     );
 };
