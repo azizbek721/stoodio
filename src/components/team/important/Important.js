@@ -1,7 +1,5 @@
 import React from 'react';
 import "./Important.scss"
-import teamImg from "../../../assets/images/stoodio-team.jpeg"
-import teamVideo from "../../../assets/videos/stoodio-team.mp4"
 
 const Important = () => {
     return (

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useCallback} from 'react';
 import {Modal} from '../discuss/DiscussWrapper';
 import {useDispatch, useSelector} from 'react-redux';
 import {closeModal} from '../../store/reducers/discussReducer';
@@ -13,11 +13,11 @@ const DiscussModal = () => {
         dispatch(closeModal());
     };
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = useCallback((e) => {
         if (e.key === 'Escape') {
             closing();
         }
-    };
+    }, [discuss]);
 
     useEffect(() => {
         if (discuss) {
@@ -31,7 +31,7 @@ const DiscussModal = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown); // Очищаем обработчик события при размонтировании
         };
-    }, [discuss]);
+    }, [discuss, handleKeyDown]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

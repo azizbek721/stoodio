@@ -30,7 +30,7 @@ const Pictures = ({ params }) => {
                             {params.images.map((el) => (
                                 <SwiperSlide key={el.id}>
                                     <PhotoView src={el.img}>
-                                        <img src={el.img} alt={`Image ${el.id}`} />
+                                        <img src={el.img} alt={`Project ${el.id}`} />
                                     </PhotoView>
                                 </SwiperSlide>
                             ))}

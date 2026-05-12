@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Resume } from '../discuss/DiscussWrapper';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeResumeModal } from '../../store/reducers/resumeReducer';
@@ -13,11 +13,11 @@ const ResumeModal = () => {
         dispatch(closeResumeModal());
     };
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = useCallback((e) => {
         if (e.key === 'Escape') {
             closing();
         }
-    };
+    }, [resume]);
 
     useEffect(() => {
         if (resume) {
@@ -31,7 +31,7 @@ const ResumeModal = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [resume]);
+    }, [resume, handleKeyDown]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
