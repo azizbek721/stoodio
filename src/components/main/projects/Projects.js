@@ -7,7 +7,9 @@ import {Context} from "../../../context/Context";
 
 const Projects = () => {
     const { width } = useWindowSize();
-    const { projects } = useContext(Context)
+    const { projects, loading } = useContext(Context)
+
+    if (loading) return null;
 
     return (
         <div className="container mx-auto">

@@ -1,14 +1,27 @@
-import React, {useContext} from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import "./Steps.scss"
 import useWindowSize from "../../../hooks/useWindowSize";
 import arrowRight from "../../../assets/images/arrow-right.svg";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
-import {Context} from "../../../context/Context";
+
 
 const Steps = () => {
 
-    const { steps } = useContext(Context)
+    const [steps, setSteps] = useState([]);
+
+    useEffect(() => {
+        const fetchSteps = async () => {
+            try {
+                const response = await axios.get('http://localhost:8080/api/steps');
+                setSteps(response.data);
+            } catch (error) {
+                console.error("Error fetching steps:", error);
+            }
+        };
+        fetchSteps();
+    }, []);
     const {width} = useWindowSize();
     const slidesPerView =
         width > 1280 ? 3.2 :
@@ -38,14 +51,14 @@ const Steps = () => {
                     modules={[Pagination]}
                     className="mySwiper"
                 >
-                    {steps.map((el) => (
+                    {steps.map((el, index) => (
                         <SwiperSlide key={el.id}>
                             <div className="steps-cards">
                                 <div className="steps-card">
                                     <div className="steps-number">
-                                        <h4>{el.number}</h4>
+                                        <h4>{el.number || (index + 1).toString().padStart(2, '0')}</h4>
                                     </div>
-                                    <h2>{el.title}</h2>
+                                    <h2>{el.name || el.title}</h2>
                                     <p>{el.description}</p>
                                 </div>
                             </div>

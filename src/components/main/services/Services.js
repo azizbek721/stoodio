@@ -1,17 +1,30 @@
-import React, {useContext} from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import "./Services.scss"
 import arrowRight from "../../../assets/images/arrow-right.svg";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
 import useWindowSize from "../../../hooks/useWindowSize";
-import {Context} from "../../../context/Context";
+
 import {dispatch} from "../../../store/store";
 import {openModal} from "../../../store/reducers/discussReducer";
 import DiscussModal from "../../../containers/modals/DiscussModal";
 
 const Services = () => {
 
-    const {services} = useContext(Context)
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+        const fetchServices = async () => {
+            try {
+                const response = await axios.get('http://localhost:8080/api/services');
+                setServices(response.data);
+            } catch (error) {
+                console.error("Error fetching services:", error);
+            }
+        };
+        fetchServices();
+    }, []);
     const {width} = useWindowSize();
     const slidesPerView =
         width > 1280 ? 3.2 :
@@ -47,7 +60,7 @@ const Services = () => {
                                 <div className="services-cards">
                                     <div className="services-card flex flex-col justify-between">
                                         <div className="services-texts">
-                                            <h2>{el.title}</h2>
+                                            <h2>{el.name || el.title}</h2>
                                             <h5>{el.description}</h5>
                                             <p>{el.description2}</p>
                                         </div>

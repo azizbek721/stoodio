@@ -8,7 +8,15 @@ import {Link} from "react-router-dom";
 
 const Portfolio = () => {
 
-    const { projects } = useContext(Context)
+    const { projects, loading } = useContext(Context);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-[#0F1115] flex items-center justify-center">
+                <div className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+        );
+    }
 
     return (
         <div>
