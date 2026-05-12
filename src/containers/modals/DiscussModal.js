@@ -17,7 +17,7 @@ const DiscussModal = () => {
         if (e.key === 'Escape') {
             closing();
         }
-    }, [discuss, closing]);
+    }, [closing]);
 
     useEffect(() => {
         if (discuss) {
