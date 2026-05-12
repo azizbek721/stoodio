@@ -1,12 +1,12 @@
-import React, {useEffect, useCallback} from 'react';
-import {Modal} from '../discuss/DiscussWrapper';
-import {useDispatch, useSelector} from 'react-redux';
-import {closeModal} from '../../store/reducers/discussReducer';
+import React, { useEffect, useCallback } from 'react';
+import { Modal } from '../discuss/DiscussWrapper';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeModal } from '../../store/reducers/discussReducer';
 import axios from 'axios';
 
 
 const DiscussModal = () => {
-    const {discuss} = useSelector((state) => state.DiscussReducer);
+    const { discuss } = useSelector((state) => state.DiscussReducer);
     const dispatch = useDispatch();
 
     const closing = useCallback(() => {
@@ -82,7 +82,7 @@ const DiscussModal = () => {
 
     return (
         <div>
-            <div className="overlay" style={{display: discuss ? 'block' : 'none'}} onClick={closing}></div>
+            <div className="overlay" style={{ display: discuss ? 'block' : 'none' }} onClick={closing}></div>
             <Modal discuss={discuss}>
                 <div className="modal-container mx-auto">
                     <div className="modal-top flex items-start">
@@ -93,12 +93,12 @@ const DiscussModal = () => {
                         <button className="modal-close-btn" onClick={closing}>X</button>
                     </div>
                 </div>
-                <hr/>
+                <hr />
                 <div className="modal-container mx-auto">
                     <form onSubmit={handleSubmit} className="modal-form flex flex-col gap-y-4">
-                        <input type="text" name="Имя" placeholder="Имя" required/>
-                        <input type="number" name="Телефон" placeholder="Телефон" required/>
-                        <input type="text" name="Город" placeholder="Город" required/>
+                        <input type="text" name="Имя" placeholder="Имя" required />
+                        <input type="number" name="Телефон" placeholder="Телефон" required />
+                        <input type="text" name="Город" placeholder="Город" required />
                         <select name="Услуги" id="services" placeholder="Какие услуги вас интересуют" required>
                             <option value="" hidden>Какие услуги вас интересуют</option>
                             <option value="проект под ключ">проект под ключ</option>
