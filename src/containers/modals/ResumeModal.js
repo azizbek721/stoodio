@@ -17,7 +17,7 @@ const ResumeModal = () => {
         if (e.key === 'Escape') {
             closing();
         }
-    }, [resume]);
+    }, [resume, closing]);
 
     useEffect(() => {
         if (resume) {
