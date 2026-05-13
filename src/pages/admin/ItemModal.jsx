@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import API_URL from '../../config';
+import { resolveImagePath } from '../../utils/resolvePath';
 
 const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
   const [formData, setFormData] = useState({});
@@ -29,6 +30,24 @@ const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
       }
     }
   }, [item, isOpen, category]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!isOpen) return;
+      
+      // If pressing Enter, only submit if not in a textarea
+      if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+        // Prevent default only if we're actually submitting
+        // If they are in an input, the form will submit anyway, but this ensures it works globally
+        onSave(formData);
+      } else if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onSave, onClose, formData]);
 
   if (!isOpen) return null;
 
@@ -87,10 +106,12 @@ const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity" onClick={onClose} />
       
-      <div className="relative bg-[#1A1C23] border border-gray-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl p-8 transform transition-all animate-in fade-in zoom-in-95 duration-200">
-        <div className="flex justify-between items-center mb-8 sticky top-0 bg-[#1A1C23] z-10 py-2 border-b border-gray-800">
+      <div className="relative bg-[#1A1C23] border border-gray-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl transform transition-all animate-in fade-in zoom-in-95 duration-200">
+        <div className="flex justify-between items-center px-8 py-6 sticky top-0 bg-[#1A1C23]/80 backdrop-blur-xl z-[60] border-b border-gray-800">
           <div>
-            <h2 className="text-2xl font-bold text-white tracking-tight">{item ? 'Edit Project' : 'Create New Project'}</h2>
+            <h2 className="text-2xl font-bold text-white tracking-tight capitalize">
+              {item ? 'Edit' : 'Create New'} {category ? category.replace(/ies$/, 'y').replace(/s$/, '') : 'Item'}
+            </h2>
             <p className="text-gray-400 text-sm mt-1 uppercase tracking-wider">{category}</p>
           </div>
           <button onClick={onClose} className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-full transition-all">
@@ -98,16 +119,16 @@ const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
           </button>
         </div>
 
-        {isUploading && (
-          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm rounded-3xl">
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-              <p className="text-white font-medium">Uploading image...</p>
+          {isUploading && (
+            <div className="absolute inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+                <p className="text-white font-medium">Uploading image...</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-8 p-8 pt-6">
           {category === 'projects' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-5">
@@ -192,7 +213,7 @@ const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
                       {imgObj.img && (
                         <div className="w-20 h-20 rounded-xl overflow-hidden border border-gray-700 flex-shrink-0 bg-black/40 shadow-lg">
                           <img 
-                            src={imgObj.img} 
+                            src={resolveImagePath(imgObj.img)} 
                             alt="Preview" 
                             className="w-full h-full object-cover" 
                             onError={(e) => { e.target.src = 'https://via.placeholder.com/150x150?text=Error'; }}
@@ -221,7 +242,7 @@ const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
                   </div>
                   {formData.img && (
                     <div className="mt-4 w-full h-48 rounded-xl overflow-hidden border border-gray-700 bg-black/20">
-                      <img src={formData.img} alt="Preview" className="w-full h-full object-contain" />
+                      <img src={resolveImagePath(formData.img)} alt="Preview" className="w-full h-full object-contain" />
                     </div>
                   )}
                 </div>

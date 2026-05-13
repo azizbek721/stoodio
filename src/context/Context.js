@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import API_URL from '../config';
+import { resolveImagePath } from '../utils/resolvePath';
 
 // Import fallback local assets
 import oneSlide from "../assets/images/main-bg.jpg";
@@ -22,31 +23,6 @@ const ContextProvider = ({ children }) => {
     const [vacancies, setVacancies] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const resolveImagePath = (path) => {
-        if (!path) return 'https://via.placeholder.com/800x600?text=No+Image';
-
-        // If the path contains "/uploads/", extract just the filename and use the current API_URL
-        // This fixes cases where the DB has a hardcoded domain (like localhost or an old Render URL)
-        if (typeof path === 'string' && path.includes('/uploads/')) {
-            const fileName = path.split('/uploads/').pop();
-            return `${API_URL}/uploads/${fileName}`;
-        }
-
-        // If it's already a full URL (not an upload)
-        if (typeof path === 'string' && path.startsWith('http')) return path;
-
-        // Try to resolve from local assets folder
-        try {
-            return require(`../assets/images/${path}`);
-        } catch (e) {
-            // Fallback for relative paths served by the backend
-            if (path.includes('/') || path.includes('.')) {
-                const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-                return `${API_URL}/uploads/${cleanPath}`;
-            }
-            return 'https://via.placeholder.com/800x600?text=Image+Not+Found';
-        }
-    };
 
     useEffect(() => {
         const fetchAllData = async () => {

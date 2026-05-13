@@ -8,9 +8,7 @@ import mainLogo from "../../../assets/images/main-logo.png"
 
 const Header = () => {
 
-    const {sliders, loading} = useContext(Context)
-    
-    if (loading) return <div className="video-container bg-[#0F1115] flex items-center justify-center"><div className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div></div>;
+    const { sliders } = useContext(Context);
 
     return (
         <div className="video-container">

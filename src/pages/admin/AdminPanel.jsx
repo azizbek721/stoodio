@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import API_URL from '../../config';
 import ItemModal from './ItemModal';
+import DeleteConfirmModal from './DeleteConfirmModal';
+import { resolveImagePath } from '../../utils/resolvePath';
 
 const CATEGORIES = [
   { id: 'advantages', label: 'Advantages' },
@@ -31,6 +33,9 @@ const AdminPanel = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [itemToDelete, setItemToDelete] = useState(null);
+
   const getApiUrl = useCallback(() => `${API_URL}/api/${currentCategory}`, [currentCategory]);
 
   // Fetch Items
@@ -52,16 +57,23 @@ const AdminPanel = () => {
     fetchItems();
   }, [fetchItems]);
 
-  // Handle Delete
-  const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this item?")) {
-      try {
-        await axios.delete(`${getApiUrl()}/${id}`);
-        setItems(prevItems => prevItems.filter(item => item.id !== id));
-      } catch (err) {
-        console.error("Error deleting item:", err);
-        alert("Failed to delete item.");
-      }
+  // Handle Delete Initiation
+  const handleDelete = (item) => {
+    setItemToDelete(item);
+    setIsDeleteModalOpen(true);
+  };
+
+  // Actual Delete Confirmation
+  const confirmDelete = async () => {
+    if (!itemToDelete) return;
+    try {
+      await axios.delete(`${getApiUrl()}/${itemToDelete.id}`);
+      setItems(prevItems => prevItems.filter(item => item.id !== itemToDelete.id));
+      setIsDeleteModalOpen(false);
+      setItemToDelete(null);
+    } catch (err) {
+      console.error("Error deleting item:", err);
+      alert("Failed to delete item.");
     }
   };
 
@@ -256,7 +268,7 @@ const AdminPanel = () => {
                               <td className="px-6 py-4 whitespace-nowrap">
                                 <div className="w-20 h-14 rounded-xl overflow-hidden border border-gray-800 bg-black/40 shadow-inner group/img transition-all duration-300 hover:scale-110 hover:shadow-indigo-500/20 hover:border-indigo-500/50">
                                   <img 
-                                    src={(item.images && item.images[0] && item.images[0].img) || 'https://via.placeholder.com/150x100?text=No+Project+Img'} 
+                                    src={resolveImagePath((item.images && item.images[0] && item.images[0].img))} 
                                     alt="Preview" 
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
                                     onError={(e) => { e.target.src = 'https://via.placeholder.com/150x100?text=Error+Loading'; }}
@@ -286,7 +298,7 @@ const AdminPanel = () => {
                               <td className="px-6 py-4 whitespace-nowrap">
                                 <div className="w-24 h-14 rounded-xl overflow-hidden border border-gray-800 bg-black/40 shadow-inner group/img transition-all duration-300 hover:scale-110 hover:shadow-indigo-500/20 hover:border-indigo-500/50">
                                   <img 
-                                    src={item.img || 'https://via.placeholder.com/150x100?text=No+Slider+Img'} 
+                                    src={resolveImagePath(item.img)} 
                                     alt="Slider Preview" 
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
                                     onError={(e) => { e.target.src = 'https://via.placeholder.com/150x100?text=Error+Loading'; }}
@@ -330,7 +342,7 @@ const AdminPanel = () => {
                                 </svg>
                               </button>
                               <button
-                                onClick={() => handleDelete(item.id)}
+                                onClick={() => handleDelete(item)}
                                 className="p-2 text-gray-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-all"
                                 title="Delete"
                               >
@@ -357,6 +369,13 @@ const AdminPanel = () => {
         onSave={handleSave}
         item={selectedItem}
         category={currentCategory}
+      />
+
+      <DeleteConfirmModal
+        isOpen={isDeleteModalOpen}
+        onClose={() => setIsDeleteModalOpen(false)}
+        onConfirm={confirmDelete}
+        itemName={itemToDelete?.name || itemToDelete?.title || `this ${currentCategory.slice(0, -1)}`}
       />
     </div>
   );
