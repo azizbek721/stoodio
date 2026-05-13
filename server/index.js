@@ -1,49 +1,46 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const cloudinary = require('cloudinary').v2;
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 const DATA_FILE = path.join(__dirname, 'data.json');
 
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
 app.use(cors());
 // Increase limit for base64 uploads
 app.use(express.json({ limit: '50mb' }));
 
-// Serve static files from the 'uploads' directory
+// Serve static files from the 'uploads' directory (kept for backward compatibility/local dev)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Manual Image Upload (Base64)
-app.post('/api/upload', (req, res) => {
-  const { image, name } = req.body;
-  
+// Manual Image Upload (Base64 to Cloudinary)
+app.post('/api/upload', async (req, res) => {
+  const { image } = req.body;
+
   if (!image) {
     return res.status(400).json({ message: 'No image data provided' });
   }
 
   try {
-    const uploadPath = path.join(__dirname, 'uploads');
-    if (!fs.existsSync(uploadPath)) {
-      fs.mkdirSync(uploadPath, { recursive: true });
-    }
+    // Upload to Cloudinary directly using the base64 string
+    const uploadResponse = await cloudinary.uploader.upload(image, {
+      folder: 'stoodio_uploads',
+    });
 
-    // Remove header (e.g. "data:image/jpeg;base64,")
-    const base64Data = image.replace(/^data:image\/\w+;base64,/, "");
-    const buffer = Buffer.from(base64Data, 'base64');
-    
-    const extension = name ? path.extname(name) : '.jpg';
-    const fileName = `${Date.now()}-${Math.round(Math.random() * 1E9)}${extension}`;
-    const filePath = path.join(uploadPath, fileName);
-
-    fs.writeFileSync(filePath, buffer);
-
-    const protocol = req.headers['x-forwarded-proto'] || 'http';
-    const imageUrl = `${protocol}://${req.headers.host}/uploads/${fileName}`;
-    res.json({ url: imageUrl });
+    res.json({ url: uploadResponse.secure_url });
   } catch (error) {
-    console.error('Upload error:', error);
-    res.status(500).json({ message: 'Failed to save image' });
+    console.error('Cloudinary upload error:', error);
+    res.status(500).json({ message: 'Failed to upload image to cloud storage' });
   }
 });
 
@@ -56,6 +53,9 @@ const isValidEntity = (entity) => ALLOWED_ENTITIES.includes(entity);
 // Helper function to read data
 const readData = () => {
   try {
+    if (!fs.existsSync(DATA_FILE)) {
+      return { advantages: [], sliders: [], projects: [], steps: [], services: [], vacancies: [] };
+    }
     const data = fs.readFileSync(DATA_FILE, 'utf8');
     return JSON.parse(data);
   } catch (error) {

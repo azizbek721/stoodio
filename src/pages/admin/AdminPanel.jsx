@@ -254,11 +254,12 @@ const AdminPanel = () => {
                                 {index + 1}
                               </td>
                               <td className="px-6 py-4 whitespace-nowrap">
-                                <div className="w-16 h-10 rounded-lg overflow-hidden border border-gray-800 bg-black/20">
+                                <div className="w-20 h-14 rounded-xl overflow-hidden border border-gray-800 bg-black/40 shadow-inner group/img transition-all duration-300 hover:scale-110 hover:shadow-indigo-500/20 hover:border-indigo-500/50">
                                   <img 
-                                    src={(item.images && item.images[0] && item.images[0].img) || 'https://via.placeholder.com/64x40?text=No+Img'} 
+                                    src={(item.images && item.images[0] && item.images[0].img) || 'https://via.placeholder.com/150x100?text=No+Project+Img'} 
                                     alt="Preview" 
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                    onError={(e) => { e.target.src = 'https://via.placeholder.com/150x100?text=Error+Loading'; }}
                                   />
                                 </div>
                               </td>
@@ -283,11 +284,12 @@ const AdminPanel = () => {
                                 {index + 1}
                               </td>
                               <td className="px-6 py-4 whitespace-nowrap">
-                                <div className="w-20 h-12 rounded-lg overflow-hidden border border-gray-800 bg-black/20">
+                                <div className="w-24 h-14 rounded-xl overflow-hidden border border-gray-800 bg-black/40 shadow-inner group/img transition-all duration-300 hover:scale-110 hover:shadow-indigo-500/20 hover:border-indigo-500/50">
                                   <img 
-                                    src={item.img || 'https://via.placeholder.com/80x48?text=No+Image'} 
+                                    src={item.img || 'https://via.placeholder.com/150x100?text=No+Slider+Img'} 
                                     alt="Slider Preview" 
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                    onError={(e) => { e.target.src = 'https://via.placeholder.com/150x100?text=Error+Loading'; }}
                                   />
                                 </div>
                               </td>

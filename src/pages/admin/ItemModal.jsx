@@ -190,8 +190,13 @@ const ItemModal = ({ isOpen, onClose, onSave, item, category }) => {
                         </label>
                       </div>
                       {imgObj.img && (
-                        <div className="w-12 h-12 rounded-lg overflow-hidden border border-gray-700 flex-shrink-0">
-                          <img src={imgObj.img} alt="Preview" className="w-full h-full object-cover" />
+                        <div className="w-20 h-20 rounded-xl overflow-hidden border border-gray-700 flex-shrink-0 bg-black/40 shadow-lg">
+                          <img 
+                            src={imgObj.img} 
+                            alt="Preview" 
+                            className="w-full h-full object-cover" 
+                            onError={(e) => { e.target.src = 'https://via.placeholder.com/150x150?text=Error'; }}
+                          />
                         </div>
                       )}
                       <button type="button" onClick={() => removeImage(idx)} className="p-2 text-gray-500 hover:text-red-400 hover:bg-red-400/10 rounded-lg transition-all">
